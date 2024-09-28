@@ -7,6 +7,7 @@ import BlogMain from "./pages/blogMain";
 import Gallery from "./pages/gallery";
 import Contact from "./pages/contact";
 import Leaders from "./pages/leaders";
+import Members from "./pages/members";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="gallery" element={<Gallery />} />
         <Route path="contact" element={<Contact />} />
         <Route path="leaders" element={<Leaders />} />
+        <Route path="members" element={<Members />} />
       </Routes>
     </BrowserRouter>
   );

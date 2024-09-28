@@ -1,20 +1,15 @@
 import { useRef } from "react";
 import { LeadersHero } from "../components/hero";
-import history from "../assets/images/about/history.png";
-import publicspeaking from "../assets/images/about/publicspeaking.png";
-import testimonials from "../assets/images/about/testimonials.png";
 import leadership from "../assets/images/about/leadership.png";
-import gallery from "../assets/images/about/gallery.png";
-import awards from "../assets/images/about/awards.png";
-import hero from "../assets/images/home/hero.jpg";
-import map from "../assets/images/home/map.png";
-import whatwedo from "../assets/images/home/whatwedo.png";
+import event from "../assets/images/leaders/event.png";
 
 const Leaders = () => {
   return (
     <>
       <LeadersHero />
-      <Leadership /> <Quotes />
+      <Leadership />
+      <Quotes />
+      <Events />
     </>
   );
 };
@@ -170,6 +165,101 @@ const Quotes = () => {
           &gt; {/* Right Arrow */}
         </button>
       </div>
+    </div>
+  );
+};
+
+//events
+const imageData = [
+  {
+    id: 1,
+    src: event,
+    text: "Image 1",
+  },
+  {
+    id: 2,
+    src: event,
+    text: "Image 2",
+  },
+  {
+    id: 3,
+    src: event,
+    text: "Image 3",
+  },
+  {
+    id: 4,
+    src: event,
+    text: "Image 4",
+  },
+  {
+    id: 5,
+    src: event,
+    text: "Image 5",
+  },
+  {
+    id: 6,
+    src: event,
+    text: "Image 6",
+  },
+  {
+    id: 7,
+    src: event,
+    text: "Image 7",
+  },
+  {
+    id: 8,
+    src: event,
+    text: "Image 8",
+  },
+  {
+    id: 9,
+    src: event,
+    text: "Image 9",
+  },
+];
+
+const ImageCard = ({ src, text }) => (
+  <div className="relative overflow-hidden">
+    <img src={src} alt={text} className="w-full h-full object-cover" />
+    <div className="absolute top-2 left-2 text-white font-bold bg-black bg-opacity-50 p-2 rounded">
+      {text}
+    </div>
+
+    <div className="absolute bottom-2 left-2">
+      <span className="ml-2 text-white">↗</span>
+      {/* <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-6 w-6 text-white"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M7 7l10 10-10 10"
+        />
+      </svg> */}
+    </div>
+  </div>
+);
+
+const ImageGrid = () => {
+  return (
+    <div className="grid grid-cols-3 gap-4 p-4">
+      {imageData.map(({ id, src, text }) => (
+        <ImageCard key={id} src={src} text={text} />
+      ))}
+    </div>
+  );
+};
+
+const Events = () => {
+  return (
+    <div>
+      <h1 className="text-2xl font-bold text-center my-4">Image Section</h1>
+      <ImageGrid />
     </div>
   );
 };

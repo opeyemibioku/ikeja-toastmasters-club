@@ -162,3 +162,24 @@ export const LeadersHero = () => {
     </section>
   );
 };
+export const MembersHero = () => {
+  return (
+    <section
+      className="relative w-full h-[60vh] bg-cover bg-center"
+      style={{ backgroundImage: `url(${galleryhero})` }}
+    >
+      <div className="absolute inset-0 bg-black opacity-40" />{" "}
+      {/* Overlay for better text visibility */}
+      <div className="flex items-center justify-center h-full relative z-10 text-center text-white">
+        <div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+            Become a Member
+          </h1>
+          <p className="text-lg md:text-xl mb-8">
+            We give you information about our past leadership
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};

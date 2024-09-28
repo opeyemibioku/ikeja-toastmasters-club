@@ -195,18 +195,18 @@ const AboutUs = () => {
   );
 };
 
-const Card = ({ image, title, shortCardContent }) => {
-  return (
-    <div className="relative max-w-sm overflow-hidden shadow-lg bg-white">
-      <img className="w-full" src={whatwedo} alt="Card Image" />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2  bg-blue-500 text-white py-5 px-4 w-11/12 h-40 ">
-        <h4 className="font-bold text-lg">{shortCardContent.title}</h4>
-        <p className="text-sm">{shortCardContent.description}</p>
-      </div>
-      <div className="px-6 py-4 mt-32"></div>
-    </div>
-  );
-};
+// const Card = ({ image, title, shortCardContent }) => {
+//   return (
+//     <div className="relative max-w-sm overflow-hidden shadow-lg bg-white">
+//       <img className="w-full" src={whatwedo} alt="Card Image" />
+//       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2  bg-blue-500 text-white py-5 px-4 w-11/12 h-40 ">
+//         <h4 className="font-bold text-lg">{shortCardContent.title}</h4>
+//         <p className="text-sm">{shortCardContent.description}</p>
+//       </div>
+//       <div className="px-6 py-4 mt-32"></div>
+//     </div>
+//   );
+// };
 const WhatWeDo = () => {
   const offerings = [
     {
