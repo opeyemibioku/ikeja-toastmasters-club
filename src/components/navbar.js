@@ -13,11 +13,11 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import toastmasterslogo from "../assets/toastmasters-logo.png";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "About us", href: "#", current: false },
-  { name: "Become a Member", href: "#", current: false },
-  { name: "Leaders", href: "#", current: false },
-  { name: "Blog", href: "#", current: false },
+  { name: "Home", href: "/", current: true },
+  { name: "About us", href: "about", current: false },
+  { name: "Become a Member", href: "members", current: false },
+  { name: "Leaders", href: "leaders", current: false },
+  { name: "Blog", href: "blog-main", current: false },
 ];
 
 function classNames(...classes) {

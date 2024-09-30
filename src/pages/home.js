@@ -184,7 +184,7 @@ const AboutUs = () => {
                 individuals develop their public speaking and leadership skills
                 in a supportive, experiential learning environment.
               </p>
-              <p className="mt-6 text-lg leading-8 text-gray-600 border-b-2 border-gray-300 inline-block">
+              <p className="mt-6 text-lg leading-8 text-gray-600 border-b-8 border-[#401119] inline-block">
                 Get to know more about us
               </p>
             </div>
@@ -211,42 +211,46 @@ const WhatWeDo = () => {
   const offerings = [
     {
       image: whatwedo,
-      title: "Offering A",
-      subtitle: "Subtitle for offering A",
+      title: "Public Speaking",
+      subtitle:
+        "At Ikeja Toastmasters, we believe in the power ofcommunication and leadership to transform lives",
     },
     {
       image: whatwedo,
-      title: "Offering B",
-      subtitle: "Subtitle for offering B",
+      title: "Public Speaking",
+      subtitle:
+        "At Ikeja Toastmasters, we believe in the power ofcommunication and leadership to transform lives",
     },
     {
       image: whatwedo,
-      title: "Offering C",
-      subtitle: "Subtitle for offering C",
+      title: "Public Speaking",
+      subtitle:
+        "At Ikeja Toastmasters, we believe in the power ofcommunication and leadership to transform lives",
     },
     {
       image: whatwedo,
-      title: "Offering D",
-      subtitle: "Subtitle for offering D",
+      title: "Public Speaking",
+      subtitle:
+        "At Ikeja Toastmasters, we believe in the power ofcommunication and leadership to transform lives",
     },
     {
       image: whatwedo,
-      title: "Offering E",
-      subtitle: "Subtitle for offering E",
+      title: "Public Speaking",
+      subtitle:
+        "At Ikeja Toastmasters, we believe in the power ofcommunication and leadership to transform lives",
     },
     {
       image: whatwedo,
-      title: "Offering F",
-      subtitle: "Subtitle for offering F",
+      title: "Public Speaking",
+      subtitle:
+        "At Ikeja Toastmasters, we believe in the power ofcommunication and leadership to transform lives",
     },
   ];
 
   return (
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-8 sm:px-12 lg:px-16">
-        <h2 className="text-4xl font-bold mb-12 text-center">
-          Our New Offerings
-        </h2>
+        <h2 className="text-4xl font-bold mb-12 text-center">What we do</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
           {offerings.map((offering, index) => (
             <div key={index} className="relative overflow-hidden shadow-lg">
@@ -255,11 +259,11 @@ const WhatWeDo = () => {
                 alt={offering.title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-x-0 bottom-0 flex flex-col justify-end bg-white bg-opacity-90 p-6 m-1 rounded-b-lg">
-                <h3 className="text-2xl font-semibold text-black mb-1">
+              <div className="absolute inset-x-0 bottom-0 flex flex-col justify-end bg-[#004165] bg-opacity-90 p-6 m-1 rounded-b-lg">
+                <h3 className="text-2xl font-semibold text-white mb-1">
                   {offering.title}
                 </h3>
-                <p className="text-lg text-black">{offering.subtitle}</p>
+                <p className="text-lg text-white">{offering.subtitle}</p>
               </div>
             </div>
           ))}
@@ -272,15 +276,15 @@ const WhatWeDo = () => {
 const MeetingSchedule = () => {
   return (
     <>
-      <div className="overflow-hidden bg-white py-12 sm:py-32">
+      <div className="overflow-hidden bg-[#004165] py-12 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-16">
             <div className="flex-grow lg:w-1/2 lg:pl-8">
               <div className="lg:max-w-lg">
-                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+                <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-3xl">
                   Our Meeting Schedule
                 </p>
-                <p className="mt-6 text-lg leading-8 text-gray-600">
+                <p className="mt-6 text-lg leading-8 text-white">
                   At Ikeja Toastmasters, we believe in the power of
                   communication and leadership to transform lives. Founded in
                   1942, our organization has grown into a community dedicated to
@@ -288,14 +292,13 @@ const MeetingSchedule = () => {
                   leadership skills in a supportive, experiential learning
                   environment.
                 </p>
-                <p className="mt-6 text-lg leading-8 text-gray-600 border-b-2 border-gray-300 inline-block">
+                <p className="mt-6 text-lg leading-8 text-white border-b-8 border-[#053852] inline-block">
                   Check our Meeting Schedule
                 </p>
               </div>
             </div>
             <div className="relative w-full lg:w-1/2 flex-shrink-0">
-              <div className="absolute inset-0 bg-gray-100 w-9/12 h-full transform translate-x-5 translate-y-8"></div>
-              {/* <div className="absolute inset-0 bg-gray-100 transform translate-x-6 translate-y-10"></div> */}
+              <div className="absolute inset-0 bg-gray-100 w-9/12 h-full transform translate-x-5 translate-y-8 opacity-10"></div>
               <img
                 className="relative w-full h-auto max-w-md object-cover"
                 src={map}
@@ -431,106 +434,20 @@ const posts = [
   },
 ];
 
-// const MembersTalk = () => {
-//   return (
-//     <div className="bg-white py-24 sm:py-32">
-//       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-//         <div className="mx-auto max-w-2xl lg:mx-0">
-//           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-//             Members Talk
-//           </h2>
-//         </div>
-//         <div className="mx-auto mt-5 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-gray-200 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-//           {posts.map((post) => (
-//             <article
-//               key={post.id}
-//               className="flex max-w-xl flex-col items-start justify-between"
-//             >
-//               <div className="group relative border-b pb-8">
-//                 <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-//                   <a href={post.href}>
-//                     <span className="absolute inset-0" />
-//                     {post.title}
-//                   </a>
-//                 </h3>
-//                 <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-//                   {post.description}
-//                 </p>
-//               </div>
-//               <div className="relative mt-8 flex items-center gap-x-4 ">
-//                 <img
-//                   alt=""
-//                   src={post.author.imageUrl}
-//                   className="h-10 w-10 rounded-full bg-gray-50"
-//                 />
-//                 <div className="text-sm leading-6">
-//                   <p className="font-semibold text-gray-900">
-//                     <a href={post.author.href}>
-//                       <span className="absolute inset-0" />
-//                       {post.author.name}
-//                     </a>
-//                   </p>
-//                   <p className="text-gray-600">{post.author.role}</p>
-//                 </div>
-//               </div>
-//             </article>
-//           ))}
-//         </div>
-//         <div className="mx-auto mt-24 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-gray-200 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-//           {posts.map((post) => (
-//             <article
-//               key={post.id}
-//               className="flex max-w-xl flex-col items-start justify-between"
-//             >
-//               <div className="group relative border-b pb-8">
-//                 <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-//                   <a href={post.href}>
-//                     <span className="absolute inset-0" />
-//                     {post.title}
-//                   </a>
-//                 </h3>
-//                 <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-//                   {post.description}
-//                 </p>
-//               </div>
-//               <div className="relative mt-8 flex items-center gap-x-4 ">
-//                 <img
-//                   alt=""
-//                   src={post.author.imageUrl}
-//                   className="h-10 w-10 rounded-full bg-gray-50"
-//                 />
-//                 <div className="text-sm leading-6">
-//                   <p className="font-semibold text-gray-900">
-//                     <a href={post.author.href}>
-//                       <span className="absolute inset-0" />
-//                       {post.author.name}
-//                     </a>
-//                   </p>
-//                   <p className="text-gray-600">{post.author.role}</p>
-//                 </div>
-//               </div>
-//             </article>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
 const MembersTalk = () => {
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            MembersTalk
+            Members Talk
           </h2>
         </div>
         <div className="mx-auto mt-5 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-gray-200 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           {posts.map((post) => (
             <article
               key={post.id}
-              className="flex max-w-xl flex-col items-start justify-between bg-white p-6 rounded-lg shadow-md"
+              className="flex max-w-xl flex-col items-start justify-between bg-[#F5F5F5] p-6 rounded-lg shadow-md"
             >
               <div className="group relative border-b pb-8">
                 <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
@@ -566,7 +483,7 @@ const MembersTalk = () => {
           {posts.map((post) => (
             <article
               key={post.id}
-              className="flex max-w-xl flex-col items-start justify-between bg-white p-6 rounded-lg shadow-md"
+              className="flex max-w-xl flex-col items-start justify-between bg-[#F5F5F5] p-6 rounded-lg shadow-md"
             >
               <div className="group relative border-b pb-8">
                 <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
@@ -836,15 +753,15 @@ const LatestBlog = () => {
 
 const Newsletter = () => {
   return (
-    <div className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
+    <div className="relative isolate overflow-hidden bg-[#004165] py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="relative bg-white/10 rounded-lg p-8 sm:p-12 lg:p-16">
+        <div className="relative bg-white rounded-lg p-8 sm:p-12 lg:p-16">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
             <div className="max-w-xl lg:max-w-lg">
-              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl">
                 Receive Updates from us
               </h2>
-              <p className="mt-4 text-lg leading-8 text-gray-300">
+              <p className="mt-4 text-lg leading-8 text-gray-800">
                 Stay in the loop with everything you need to know.
               </p>
             </div>
@@ -860,16 +777,16 @@ const Newsletter = () => {
                   required
                   placeholder="Enter your email"
                   autoComplete="email"
-                  className="min-w-0 flex-auto rounded-md border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                  className="min-w-0 flex-auto rounded-md border-0 bg-white px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-[#772432] sm:text-sm sm:leading-6"
                 />
                 <button
                   type="submit"
-                  className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                  className="flex-none rounded-md bg-[#772432] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#5e1c25] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#772432]"
                 >
                   Subscribe
                 </button>
               </div>
-              <p className="mt-4 text-lg leading-8 text-gray-300">
+              <p className="mt-4 text-lg leading-8 text-gray-800">
                 We care about your data in our privacy policy.
               </p>
             </div>

@@ -121,8 +121,8 @@ const testimonialsData = [
 
 const TestimonialCard = ({ text, author }) => (
   <div className="min-w-[30rem] overflow-hidden mx-2 mb-8 pt-8">
-    <p className="text-gray-600">{text}</p>
-    <p className="text-left font-semibold mt-4">{author}</p>
+    <p className="text-gray-600 text-white">{text}</p>
+    <p className="text-left font-semibold mt-4 text-white">{author}</p>
   </div>
 );
 
@@ -137,8 +137,8 @@ const Quotes = () => {
   };
 
   return (
-    <div className="pl-32">
-      <h1 className="text-2xl font-bold mt-8">Testimonials</h1>
+    <div className="pl-32 bg-[#004165] py-8">
+      <h1 className="text-2xl font-bold mt-8 text-white">Testimonials</h1>
       <div
         className="flex overflow-x-scroll scrollbar-hide pb-8"
         ref={scrollRef}

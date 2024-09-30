@@ -193,7 +193,7 @@ const Offerings = () => {
             </div>
           ))}
         </div>
-        <button className="mt-8 px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition">
+        <button className="mt-8 px-6 py-3 bg-[#004165] text-white font-medium rounded-md hover:bg-[#5e1c25] transition">
           Learn More
         </button>
       </div>
@@ -330,7 +330,7 @@ const Gallery = () => {
           <p className="text-lg mb-8">
             Discover the benefits of our offerings.
           </p>
-          <button className="px-6 py-3 bg-blue-600 text-white font-medium text-lg rounded-md hover:bg-blue-700 transition">
+          <button className="px-6 py-3 bg-[#004165] text-white font-medium text-lg rounded-md hover:bg-blue-700 transition">
             Get Started
           </button>
         </div>
@@ -367,11 +367,11 @@ const Awards = () => {
             </div>
 
             {/* Card Section on the Right */}
-            <div className="lg:w-1/2 bg-white rounded-lg shadow-lg px-5">
-              <h3 className="text-2xl font-semibold mb-2 mt-8">
+            <div className="lg:w-1/2 bg-[#004165] rounded-lg shadow-lg px-5">
+              <h3 className="text-2xl font-semibold mb-2 mt-8 text-white">
                 International
               </h3>
-              <p className="text-lg text-gray-600 mb-4">
+              <p className="text-lg text-white mb-4">
                 The best option for growing your business
               </p>
               <div className="mt-4">
@@ -389,11 +389,11 @@ const Awards = () => {
         <div className="container mx-auto px-8 sm:px-12 lg:px-16">
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-8">
             {/* Card Section on the Left */}
-            <div className="lg:w-1/2 bg-white rounded-lg shadow-lg px-5">
-              <h3 className="text-2xl font-semibold mb-2 mt-8">
+            <div className="lg:w-1/2 bg-[#004165] rounded-lg shadow-lg px-5">
+              <h3 className="text-2xl font-semibold mb-2 mt-8 text-white">
                 Our Premium Package
               </h3>
-              <p className="text-lg text-gray-600 mb-4">
+              <p className="text-lg text-white mb-4">
                 The best option for growing your business
               </p>
               <div className="mt-4">
@@ -406,11 +406,11 @@ const Awards = () => {
             </div>
 
             {/* Card Section on the Right */}
-            <div className="lg:w-1/2 bg-white rounded-lg shadow-lg px-5">
-              <h3 className="text-2xl font-semibold mb-2 mt-8">
+            <div className="lg:w-1/2 bg-[#004165] rounded-lg shadow-lg px-5">
+              <h3 className="text-2xl font-semibold mb-2 mt-8 text-white">
                 Our Premium Package
               </h3>
-              <p className="text-lg text-gray-600 mb-4">
+              <p className="text-lg mb-4 text-white">
                 The best option for growing your business
               </p>
               <div className="mt-4">
@@ -472,7 +472,7 @@ const FAQ = () => {
             <p className="text-lg text-gray-600 mb-6">
               Explore our wide range of services tailored to meet your needs.
             </p>
-            <button className="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700">
+            <button className="bg-white border border-[#772432] text-[#772432] py-2 px-6 rounded-lg hover:bg-[#f8f8f8] hover:text-[#772432] transition">
               Learn More
             </button>
           </div>
