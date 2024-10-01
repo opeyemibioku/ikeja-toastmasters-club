@@ -47,11 +47,14 @@ export default function Navbar() {
           {/* <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"> */}
           <div className="flex flex-1 items-center justify-center sm:items-stretch">
             <div className="flex flex-shrink-0 items-center">
-              <img
-                alt="toastmasterslogo"
-                src={toastmasterslogo}
-                className="h-8 w-auto"
-              />
+              <a href="/">
+                {" "}
+                <img
+                  alt="toastmasterslogo"
+                  src={toastmasterslogo}
+                  className="h-8 w-auto"
+                />
+              </a>
             </div>
             <div className="hidden sm:ml-6 sm:block flex-1 justify-center">
               <div className="flex justify-center space-x-4">

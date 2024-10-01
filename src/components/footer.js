@@ -1,113 +1,127 @@
+// internal import
+import toastmasterslogo from "../assets/toastmasters-logo.png";
+import fb from "../assets/fb.svg";
+import x from "../assets/x.svg";
+import linkedin from "../assets/linkedin.svg";
+import ig from "../assets/ig.svg";
+import youtube from "../assets/youtube.svg";
+
 export const Footer = () => {
   return (
     <>
-      <footer class="bg-gray-100 py-8">
+      <footer class="py-8" style={{ backgroundColor: "rgba(0, 65, 101, 0.9)" }}>
+        {/* <footer class="bg-[#004165] py-8" style={{ backgroundColor: 'rgba(0, 65, 101, 0.9)' }}> */}
         <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-0">
           <div>
-            <h4 class="text-lg font-bold mb-4">Clothing</h4>
+            <h4 class="text-lg font-bold mb-4 text-white">
+              Meeting Place Address
+            </h4>
             <ul class="list-none space-y-2">
-              <li>Tops</li>
-              <li>Dresses</li>
-              <li>Pants</li>
-              <li>Denim</li>
-              <li>Sweaters</li>
-              <li>T-Shirts</li>
-              <li>Jackets</li>
-              <li>Activewear</li>
-              <li>Browse All</li>
+              <li className="text-white">13, Walter Carrington</li>
+              <li className="text-white">Victoria Island</li>
+              <li className="text-white">Lagos</li>
+              <li className="text-white">Nigeria</li>
             </ul>
           </div>
 
           <div>
-            <h4 class="text-lg font-bold mb-4">Accessories</h4>
+            <h4 class="text-lg font-bold mb-4 text-white">Extra Navigation</h4>
             <ul class="list-none space-y-2">
-              <li>Watches</li>
-              <li>Wallets</li>
-              <li>Bags</li>
-              <li>Sunglasses</li>
-              <li>Hats</li>
-              <li>Belts</li>
+              <a href="/">
+                {" "}
+                <li className="text-white">Home</li>
+              </a>
+              <a href="/members">
+                {" "}
+                <li className="text-white">Become a member</li>
+              </a>
+              <a href="/blog-main">
+                {" "}
+                <li className="text-white">News & Articles</li>
+              </a>
+              <a href="/about">
+                {" "}
+                <li className="text-white">About us</li>
+              </a>
             </ul>
           </div>
 
           <div>
-            <h4 class="text-lg font-bold mb-4">Brands</h4>
+            <h4 class="text-lg font-bold mb-4 text-white">External Links</h4>
             <ul class="list-none space-y-2">
-              <li>Full Nelson</li>
-              <li>My Way</li>
-              <li>Re-Arranged</li>
-              <li>Counterfeit</li>
-              <li>Significant Other</li>
+              <li className="text-white">Toastmasters International</li>
+              <li className="text-white">Eagles Toastmasters</li>
+              <li className="text-white">Broadway Toastmasters</li>
+              <li className="text-white">Navant</li>
             </ul>
           </div>
 
           <div>
-            <h4 class="text-lg font-bold mb-4">About Us</h4>
+            <h4 class="text-lg font-bold mb-4 text-white">Contact Us</h4>
             <ul class="list-none space-y-2">
-              <li>Our Story</li>
-              <li>Careers</li>
-              <li>Sustainability</li>
-              <li>Press</li>
-              <li>Contact</li>
+              <li className="text-white">13, Walter Carrington</li>
+              <li className="text-white">Victoria Island</li>
+              <li className="text-white">Lagos</li>
+              <li className="text-white">Nigeria</li>
+              <a href="/contact">
+                {" "}
+                <li className="text-white">Contact</li>
+              </a>
             </ul>
           </div>
 
           <div class="flex flex-col justify-end">
             <div class="flex items-center space-x-4">
-              <h4 class="text-lg font-bold">Get in Touch</h4>
+              <h4 class="text-lg font-bold text-white">Get in Touch</h4>
               <div class="flex space-x-4">
                 <a href="#" class="text-gray-600 hover:text-gray-900">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.61 8.04 8.29 8.88v-6.28h-2.5v-2.6h2.5v-1.99c0-2.45 1.49-3.79 3.67-3.79 1.04 0 1.94.08 2.19.11v2.53h-1.5c-1.18 0-1.41.56-1.41 1.38v1.77h2.81l-.37 2.6h-2.43v6.28c4.68-.84 8.29-4.47 8.29-8.88 0-5.5-4.46-9.96-9.96-9.96z" />
-                  </svg>
+                  <img src={fb} />
                 </a>
                 <a href="#" class="text-gray-600 hover:text-gray-900">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.61 8.04 8.29 8.88v-6.28h-2.5v-2.6h2.5v-1.99c0-2.45 1.49-3.79 3.67-3.79 1.04 0 1.94.08 2.19.11v2.53h-1.5c-1.18 0-1.41.56-1.41 1.38v1.77h2.81l-.37 2.6h-2.43v6.28c4.68-.84 8.29-4.47 8.29-8.88 0-5.5-4.46-9.96-9.96-9.96z" />
-                  </svg>
+                  <img src={x} />
                 </a>
                 <a href="#" class="text-gray-600 hover:text-gray-900">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.61 8.04 8.29 8.88v-6.28h-2.5v-2.6h2.5v-1.99c0-2.45 1.49-3.79 3.67-3.79 1.04 0 1.94.08 2.19.11v2.53h-1.5c-1.18 0-1.41.56-1.41 1.38v1.77h2.81l-.37 2.6h-2.43v6.28c4.68-.84 8.29-4.47 8.29-8.88 0-5.5-4.46-9.96-9.96-9.96z" />
-                  </svg>
+                  <img src={linkedin} />
+                </a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">
+                  <img src={ig} />
+                </a>
+                <a href="#" class="text-gray-600 hover:text-gray-900">
+                  <img src={youtube} />
                 </a>
               </div>
             </div>
           </div>
         </div>
       </footer>
-      <div class="bg-gray-200 py-2">
-        <div class="container mx-auto flex items-center justify-between px-4">
-          <div class="flex items-center space-x-2">
-            <img src="logo.png" alt="Company Logo" class="h-8" />
-            <span class="text-lg font-bold">Ikeja Toastmasters</span>
+      <div className="bg-[#004165] py-2">
+        <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between px-4">
+          {/* Logo and Title for small screens */}
+          <div className="flex items-center space-x-2 sm:hidden mb-2">
+            <img src={toastmasterslogo} alt="Company Logo" className="h-8" />
+            <span className="text-lg font-bold text-white">
+              IKEJA TOASTMASTERS
+            </span>
           </div>
 
-          <div class="flex flex-col items-end space-y-1">
-            <div class="flex space-x-4 text-gray-600">
-              <a href="#" class="hover:text-gray-900">
+          {/* Logo and Title for larger screens */}
+          <div className="hidden sm:flex items-center space-x-2">
+            <img src={toastmasterslogo} alt="Company Logo" className="h-8" />
+            <span className="text-lg font-bold text-white">
+              IKEJA TOASTMASTERS
+            </span>
+          </div>
+
+          <div className="flex flex-col items-end space-y-1">
+            <div className="flex space-x-4 text-gray-600">
+              <a href="#" className="hover:text-gray-900 text-white">
                 Privacy Policy
               </a>
-              <a href="#" class="hover:text-gray-900">
+              <a href="#" className="hover:text-gray-900 text-white">
                 Terms and Conditions
               </a>
             </div>
-            <span class="text-sm text-gray-600">
+            <span className="text-sm text-gray-600 text-white">
               © Copyright 2024 Ikeja Toastmasters. All Rights Reserved
             </span>
           </div>

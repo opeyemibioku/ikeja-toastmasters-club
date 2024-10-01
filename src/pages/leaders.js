@@ -139,8 +139,8 @@ const Quotes = () => {
   };
 
   return (
-    <div className="pl-32 bg-[#004165] py-8">
-      <h1 className="text-2xl font-bold mt-8 text-white">
+    <div className="lg:pl-32 bg-[#004165] py-8">
+      <h1 className="text-2xl font-bold mt-8 text-white pl-4">
         Past Presidents Quotes
       </h1>
       <div
@@ -173,7 +173,7 @@ const Quotes = () => {
   );
 };
 
-//events
+// Events
 const imageData = [
   {
     id: 1,
@@ -223,14 +223,17 @@ const imageData = [
 ];
 
 const ImageCard = ({ src, text }) => (
-  <div className="relative overflow-hidden">
-    <img src={src} alt={text} className="w-full h-full object-cover" />
+  <div className="relative overflow-hidden mb-4">
+    <img
+      src={src}
+      alt={text}
+      className="w-full h-48 object-cover md:h-60 lg:h-72"
+    />
     <div className="absolute top-2 left-2 text-white font-bold bg-black bg-opacity-50 p-2 rounded">
       {text}
     </div>
-
     <div className="absolute bottom-2 left-2">
-      <span className="ml-2 text-white ">
+      <span className="ml-2 text-white">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"
@@ -251,7 +254,7 @@ const ImageCard = ({ src, text }) => (
 
 const ImageGrid = () => {
   return (
-    <div className="grid grid-cols-3 gap-4 p-4">
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 p-4">
       {imageData.map(({ id, src, text }) => (
         <ImageCard key={id} src={src} text={text} />
       ))}
@@ -261,7 +264,7 @@ const ImageGrid = () => {
 
 const Events = () => {
   return (
-    <div className="px-16">
+    <div className="px-4 md:px-16">
       <h1 className="text-2xl font-bold my-4 pl-4 mt-8">Milestone Events</h1>
       <ImageGrid />
     </div>

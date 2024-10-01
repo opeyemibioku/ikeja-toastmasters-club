@@ -21,24 +21,25 @@ const Members = () => {
 
 const DownloadsSignUpSection = () => {
   return (
-    <div className="bg-[#004165] text-white py-4 flex items-center justify-center">
-      <div className="flex items-center">
-        <p className="text-lg mb-0 md:mr-10">
+    <div className="bg-[#004165] text-white py-4 flex items-center justify-center px-4 text-center">
+      <div className="flex flex-col sm:flex-row items-center">
+        <p className="text-lg mb-2 sm:mb-0 sm:mr-10">
           Sign up for 10 daily free downloads and access to AI tools
         </p>
-        <button className="bg-[#772432] hover:bg-[#8a2638] text-white font-semibold py-2 px-4 rounded ml-4">
-          Join a Club
-        </button>
+        <a href="/join-a-club">
+          <button className="bg-[#772432] hover:bg-[#8a2638] text-white font-semibold py-2 px-4 rounded">
+            Join a Club
+          </button>
+        </a>
       </div>
     </div>
   );
 };
+
 const WelcomeToTheClub = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between py-10 px-24">
+    <div className="flex flex-col md:flex-row items-center justify-between py-10 px-6 md:px-24">
       <div className="md:w-6/12 mb-8 md:mb-0 md:pr-4">
-        {" "}
-        {/* Added padding to the right */}
         <h2 className="text-2xl font-bold mb-4">
           We are proud to welcome you to the club
         </h2>
@@ -70,14 +71,42 @@ const WelcomeToTheClub = () => {
   );
 };
 
+// const BecomeMember = () => {
+//   return (
+//     <div className="flex flex-col md:flex-row items-center justify-between p-10 bg-[#3F1018] text-white min-h-screen">
+//       <div className="md:w-1/2 mb-8 md:mb-0 flex flex-col justify-center items-center md:items-start lg:mx-8">
+//         <h1 className="text-3xl font-bold mb-4 text-center md:text-left">
+//           How much does it cost to be a member?
+//         </h1>
+//         <p className="text-lg text-center md:text-left">
+//           At Ikeja Toastmasters, we believe in the power of communication and
+//           leadership to transform lives. Founded in 2014, our organization has
+//           grown into a community dedicated to helping individuals develop their
+//           public speaking and leadership skills in a supportive, experiential
+//           learning environment. <br />
+//           At Ikeja Toastmasters, we believe in the power of communication and
+//           leadership to transform lives.
+//         </p>
+//       </div>
+//       <div className="md:w-1/2 flex justify-center">
+//         <img
+//           src={membershipcost} // Replace with your image URL
+//           alt="Example"
+//           className="w-full h-auto rounded-lg"
+//         />
+//       </div>
+//     </div>
+//   );
+// };
+
 const BecomeMember = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between p-10 bg-[#3F1018] text-white mx-16">
-      <div className="md:w-1/2 mb-8 md:mb-0">
-        <h1 className="text-3xl font-bold mb-4">
+    <div className="flex flex-col md:flex-row items-center justify-between p-10 bg-[#3F1018] text-white lg:mx-16 lg:p-10">
+      <div className="md:w-1/2 mb-8 md:mb-0 flex flex-col justify-center items-center md:items-start">
+        <h1 className="text-3xl font-bold mb-4 text-center md:text-left">
           How much does it cost to be a member?
         </h1>
-        <p className="text-lg">
+        <p className="text-lg text-center md:text-left">
           At Ikeja Toastmasters, we believe in the power of communication and
           leadership to transform lives. Founded in 2014, our organization has
           grown into a community dedicated to helping individuals develop their
@@ -200,7 +229,10 @@ const FreeTrial = () => {
   ];
 
   return (
-    <section className="py-16 bg-[#004165] px-4 md:px-8 lg:px-12 mt-16">
+    <section
+      className="py-16 bg-[#004165] px-4 md:px-8 lg:px-12 my-16"
+      id="join-a-club"
+    >
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center lg:text-left lg:space-x-12">
         {/* Contact Form on the Left */}
         <div className="lg:w-4/12 mx-auto bg-white p-6 rounded-lg shadow-md">

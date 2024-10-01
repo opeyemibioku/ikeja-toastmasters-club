@@ -437,10 +437,10 @@ const BlogScroll = () => {
   };
 
   return (
-    <div className="pl-32">
-      <p>Latest posts</p>
-      <h1 className="text-2xl font-bold mb-4">Ikeja toastmasters Blog</h1>
-      <p className="mb-8">
+    <div className="lg:pl-32">
+      <h1 className="text-xl font-bold mb-4 pl-4">Latest Posts</h1>
+      <h1 className="text-2xl font-bold mb-4 pl-4">Ikeja toastmasters Blog</h1>
+      <p className="mb-8 pl-4">
         Interviews, tips, guides, industry best practices, and news.
       </p>
       <div

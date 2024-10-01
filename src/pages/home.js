@@ -106,31 +106,34 @@ const AboutUs = () => {
                 individuals develop their public speaking and leadership skills
                 in a supportive, experiential learning environment.
               </p>
-              <div className="mt-6 text-lg leading-8 text-gray-600 relative">
-                <span className="inline-flex items-center">
-                  <p className="mr-2">Get to know more about us</p>
-                  <span className="text-black">
-                    {/* Top-right arrow (SVG) */}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M7 17L17 7" />
-                      <path d="M7 7h10v10" />
-                    </svg>
+              <a href="/about">
+                {" "}
+                <div className="mt-6 text-lg leading-8 text-gray-600 relative">
+                  <span className="inline-flex items-center">
+                    <p className="mr-2">Get to know more about us</p>
+                    <span className="text-black">
+                      {/* Top-right arrow (SVG) */}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M7 17L17 7" />
+                        <path d="M7 7h10v10" />
+                      </svg>
+                    </span>
                   </span>
-                </span>
-                <div
-                  className="border-b-8 border-[#401119] mt-2"
-                  style={{ width: "15rem" }} // Adjust the width of the line as needed
-                ></div>
-              </div>
+                  <div
+                    className="border-b-8 border-[#401119] mt-2"
+                    style={{ width: "15rem" }} // Adjust the width of the line as needed
+                  ></div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -209,7 +212,10 @@ const WhatWeDo = () => {
 const MeetingSchedule = () => {
   return (
     <>
-      <div className="overflow-hidden bg-[#004165] py-12 sm:py-32">
+      <div
+        className="overflow-hidden bg-[#004165] py-12 sm:py-32"
+        id="meetings"
+      >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-16">
             <div className="flex-grow lg:w-1/2 lg:pl-8">
@@ -387,7 +393,7 @@ const blogCardsData = [
     additionalSubtitle:
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
     image: blogprev,
-    readMoreLink: "/blog-card-1", // Unique link for Blog Card 1
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 1
   },
   {
     id: 2,
@@ -397,7 +403,7 @@ const blogCardsData = [
     additionalSubtitle:
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
     image: blogprev,
-    readMoreLink: "/blog-card-2", // Unique link for Blog Card 2
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 2
   },
   {
     id: 3,
@@ -407,7 +413,7 @@ const blogCardsData = [
     additionalSubtitle:
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
     image: blogprev,
-    readMoreLink: "/blog-card-3", // Unique link for Blog Card 3
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 3
   },
   {
     id: 4,
@@ -417,7 +423,7 @@ const blogCardsData = [
     additionalSubtitle:
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
     image: blogprev,
-    readMoreLink: "/blog-card-4", // Unique link for Blog Card 4
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 4
   },
   {
     id: 5,
@@ -427,7 +433,7 @@ const blogCardsData = [
     additionalSubtitle:
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
     image: blogprev,
-    readMoreLink: "/blog-card-5", // Unique link for Blog Card 5
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 5
   },
   {
     id: 6,
@@ -437,7 +443,7 @@ const blogCardsData = [
     additionalSubtitle:
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
     image: blogprev,
-    readMoreLink: "/blog-card-6", // Unique link for Blog Card 6
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 6
   },
   {
     id: 7,
@@ -447,7 +453,7 @@ const blogCardsData = [
     additionalSubtitle:
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
     image: blogprev,
-    readMoreLink: "/blog-card-7", // Unique link for Blog Card 7
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 7
   },
   {
     id: 8,
@@ -457,7 +463,7 @@ const blogCardsData = [
     additionalSubtitle:
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
     image: blogprev,
-    readMoreLink: "/blog-card-8", // Unique link for Blog Card 8
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 8
   },
   {
     id: 9,
@@ -467,7 +473,7 @@ const blogCardsData = [
     additionalSubtitle:
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
     image: blogprev,
-    readMoreLink: "/blog-card-9", // Unique link for Blog Card 9
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 9
   },
   {
     id: 10,
@@ -477,7 +483,7 @@ const blogCardsData = [
     additionalSubtitle:
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
     image: blogprev,
-    readMoreLink: "/blog-card-10", // Unique link for Blog Card 10
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 10
   },
 ];
 
@@ -502,8 +508,8 @@ const LatestBlog = () => {
   };
 
   return (
-    <div className="pl-32">
-      <h1 className="text-2xl font-bold mb-4">Blog Cards</h1>
+    <div className="lg:pl-32">
+      <h1 className="text-xl font-bold mb-4 pl-4">Read the latest from us</h1>
       <div
         className="flex overflow-x-scroll scrollbar-hide py-2"
         ref={scrollRef}
@@ -588,7 +594,7 @@ const LatestBlog = () => {
 
 const Newsletter = () => {
   return (
-    <div className="relative isolate overflow-hidden bg-[#004165] py-16 sm:py-24 lg:py-32">
+    <div className="relative isolate overflow-hidden bg-[#004165] py-16 sm:py-24 lg:py-32 mb-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="relative bg-white rounded-lg p-8 sm:p-12 lg:p-16">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
@@ -600,8 +606,8 @@ const Newsletter = () => {
                 Stay in the loop with everything you need to know.
               </p>
             </div>
-            <div className="">
-              <div className="mt-6 flex max-w-md gap-x-4">
+            <div>
+              <div className=" flex flex-col sm:flex-row max-w-md gap-x-4">
                 <label htmlFor="email-address" className="sr-only">
                   Email address
                 </label>
@@ -616,7 +622,7 @@ const Newsletter = () => {
                 />
                 <button
                   type="submit"
-                  className="flex-none rounded-md bg-[#772432] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#5e1c25] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#772432]"
+                  className="mt-4 sm:mt-0 flex-none rounded-md bg-[#772432] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#5e1c25] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#772432]"
                 >
                   Subscribe
                 </button>

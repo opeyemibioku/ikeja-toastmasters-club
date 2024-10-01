@@ -116,10 +116,10 @@ const ThreeImageSection = () => {
   };
 
   return (
-    <div className="py-16 px-12 md:px-20">
+    <div className="pb-16 pt-8 px-8 md:px-20">
       {" "}
       {/* Added padding to both left and right */}
-      <h2 className="text-3xl font-bold mb-8 text-left">
+      <h2 className="text-2xl font-bold mb-8 text-left">
         {" "}
         {/* Changed text-center to text-left */}
         Club Photos
@@ -160,7 +160,7 @@ const ThreeImageSection = () => {
         >
           Previous
         </button>
-        <span className="text-lg">
+        <span className="text-sm">
           Page {currentPage + 1} of {totalPages}
         </span>
         <button

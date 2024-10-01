@@ -10,6 +10,8 @@ import awards from "../assets/images/about/awards.png";
 import hero from "../assets/images/home/hero.jpg";
 import map from "../assets/images/home/map.png";
 import whatwedo from "../assets/images/home/whatwedo.png";
+import iktm from "../assets/toastmasters-logo.png";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -27,139 +29,252 @@ const About = () => {
   );
 };
 
-const Hero = () => {
+const Heroo = () => {
   return (
     <>
-      <section class="relative flex flex-col-reverse md:flex-row items-center justify-around gap-8 p-8 md:p-16">
-        <div class="md:w-5/12 space-y-4">
-          <p class="text-lg md:text-xl text-gray-700">ABOUT US</p>
-          <h1 class="text-3xl md:text-4xl font-bold text-[#094F72]">
+      <section className="relative flex flex-col-reverse md:flex-row items-center justify-around gap-8 p-8 md:p-16">
+        <div className="md:w-5/12 space-y-4">
+          <p className="text-lg md:text-xl text-gray-700">ABOUT US</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-[#094F72]">
             Helping individuals develop their public speaking and leadership
             skills in a supportive and encouraging environment
           </h1>
         </div>
-        <div class="md:w-5/12 relative">
-          <img src={abouthero} alt="Hero Image" class="h-auto z-10 relative" />
+        <div className="md:w-5/12 relative">
+          <div className="hidden lg:block md:block max-w-lg rounded overflow-hidden shadow-lg bg-[#004165] w-full h-auto z-10 relative -right-20">
+            {/* Image */}
+            <img
+              className="w-full h-auto z-10 relative"
+              src={abouthero}
+              alt=""
+            />
 
+            {/* Card Content */}
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2 text-white">
+                IN PARTNERSHIP WITH
+              </div>
+              <div className="flex items-center space-x-2">
+                <img src={iktm} alt="Ikeja Toastmasters" />
+                <p className="text-base text-white">IKEJA TOASTMASTERS</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            {" "}
+            <img
+              src={abouthero}
+              alt="Behind Image"
+              className="md:block absolute -left-20 top-64 h-auto z-0"
+            />
+          </div>
+        </div>
+        {/* <div className="md:w-5/12 relative">
+          <img
+            src={abouthero}
+            alt="Hero Image"
+            className="h-auto z-10 relative"
+          />
           <img
             src={abouthero}
             alt="Behind Image"
-            class="hidden md:block absolute -left-20 top-64 h-auto z-0"
+            className="hidden md:block absolute -left-20 top-64 h-auto z-0"
           />
-        </div>
+        </div> */}
       </section>
 
-      <section class="relative flex flex-col p-8 md:p-16">
-        <div class="md:w-6/12 space-y-4">
-          <h2 class="pl-4">OUR VALUES</h2>
-          <div class="space-y-4 md:space-y-0">
-            <div class="group md:cursor-pointer p-4 rounded-md transition-all relative">
-              <h3 class="text-lg font-semibold">Community Building</h3>
-              <p class="hidden md:group-hover:block text-gray-700 mt-2">
-                We are committed to being honest, transparent, and accountable
-                in all our actions.
-              </p>
-              <p class="block md:hidden text-gray-700 mt-2">
-                We are committed to being honest, transparent, and accountable
-                in all our actions.
-              </p>
-            </div>
-
-            <div class="group md:cursor-pointer p-4 rounded-md transition-all relative">
-              <h3 class="text-lg font-semibold">Community Building</h3>
-              <p class="hidden md:group-hover:block text-gray-700 mt-2">
-                Working together is key to achieving success and fostering
-                innovation.
-              </p>
-              <p class="block md:hidden text-gray-700 mt-2">
-                Working together is key to achieving success and fostering
-                innovation.
-              </p>
-            </div>
-
-            <div class="group md:cursor-pointer p-4 rounded-md transition-all relative">
-              {/* <div class="group md:cursor-pointer md:hover:bg-gray-100 p-4 rounded-md transition-all relative"> */}
-              <h3 class="text-lg font-semibold">Community Building</h3>
-              <p class="hidden md:group-hover:block text-gray-700 mt-2">
-                We strive for the highest standards in everything we do.
-              </p>
-              <p class="block md:hidden text-gray-700 mt-2">
-                We strive for the highest standards in everything we do.
-              </p>
-            </div>
+      <section className="relative flex flex-col p-8 md:p-16">
+        <div className="md:w-6/12 space-y-4">
+          <h2 className="pl-4">OUR VALUES</h2>
+          <div className="space-y-4">
+            {["Community Building", "Teamwork", "Excellence"].map(
+              (value, index) => (
+                <div
+                  key={index}
+                  className="group cursor-pointer p-4 rounded-md transition-all relative"
+                >
+                  <h3 className="text-lg font-semibold">{value}</h3>
+                  <p className="hidden group-hover:block text-gray-700 mt-2">
+                    {value === "Community Building"
+                      ? "We are committed to being honest, transparent, and accountable in all our actions."
+                      : value === "Teamwork"
+                      ? "Working together is key to achieving success and fostering innovation."
+                      : "We strive for the highest standards in everything we do."}
+                  </p>
+                  <p className="block md:hidden text-gray-700 mt-2">
+                    {value === "Community Building"
+                      ? "We are committed to being honest, transparent, and accountable in all our actions."
+                      : value === "Teamwork"
+                      ? "Working together is key to achieving success and fostering innovation."
+                      : "We strive for the highest standards in everything we do."}
+                  </p>
+                </div>
+              )
+            )}
           </div>
         </div>
       </section>
     </>
   );
 };
-const OurHistory = () => {
+
+const Hero = () => {
   return (
     <>
-      <div class="flex items-center justify-center h-screen bg-gray-100">
-        <div class="w-full max-w-6xl flex items-center">
-          <div class="w-7/4">
+      <section className="relative flex flex-col-reverse md:flex-row items-center justify-around gap-8 p-8 md:p-16">
+        {/* About Section */}
+        <div className="md:w-5/12 space-y-4">
+          <p className="text-lg md:text-xl text-gray-700">ABOUT US</p>
+          <h1 className="text-3xl md:text-4xl font-bold text-[#094F72]">
+            Helping individuals develop their public speaking and leadership
+            skills in a supportive and encouraging environment
+          </h1>
+        </div>
+
+        {/* Image Section */}
+        <div className="md:w-5/12 relative">
+          {/* Leadership Image for medium and small screens */}
+          <div className="block md:hidden">
             <img
-              src={history}
-              alt="Carousel Image"
-              class="w-80 h-92 object-cover"
+              src={abouthero}
+              alt="Leadership Image"
+              className="w-full h-auto"
             />
           </div>
-          <div class="w-3/4 p-12">
-            <div class="mb-6">
-              <h2 class="mb-4">History</h2>
-              <p class="text-gray-700 text-lg">
-                At Ikeja Toastmasters, we believe in the power of communication
-                and leadership to transform lives. Founded in 1942, our
-                organization has grown into a community dedicated to to helping
-                individuals develop their public speaking and leadership skills
-                in a supportive, experiential learning environment. <br />{" "}
-                <br />
-                At Ikeja Toastmasters, we believe in the power of communication
-                and leadership to transform lives. Founded in 1942, our
-                organization has grown into a community dedicated to to helping
-                individuals develop their public speaking and leadership skills
-                in a supportive, experiential learning environment.
-              </p>
+
+          {/* About Hero section only visible on larger screens */}
+          <div className="hidden md:block max-w-lg rounded overflow-hidden shadow-lg bg-[#004165] w-full h-auto z-10 relative -right-20">
+            {/* Image */}
+            <img
+              className="w-full h-auto z-10 relative"
+              src={abouthero}
+              alt="Hero Image"
+            />
+
+            {/* Card Content */}
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2 text-white">
+                IN PARTNERSHIP WITH
+              </div>
+              <div className="flex items-center space-x-2">
+                <img src={iktm} alt="Ikeja Toastmasters" className="w-8 h-8" />
+                <p className="text-base text-white">IKEJA TOASTMASTERS</p>
+              </div>
             </div>
-            <div class="flex  space-x-6 mt-8">
-              <button class="p-3 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+          </div>
+
+          {/* Leadership Image for large screens */}
+          <div className="hidden md:block">
+            <img
+              src={abouthero}
+              alt="Behind Image"
+              className="absolute -left-20 top-64 h-auto z-0"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="relative flex flex-col p-8 md:p-16">
+        <div className="md:w-6/12 space-y-4">
+          <h2 className="pl-4">OUR VALUES</h2>
+          <div className="space-y-4">
+            {["Community Building", "Teamwork", "Excellence"].map(
+              (value, index) => (
+                <div
+                  key={index}
+                  className="group cursor-pointer p-4 rounded-md transition-all relative"
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 19l-7-7 7-7"
-                  />
-                </svg>
-              </button>
-              <button class="p-3 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
-            </div>
+                  <h3 className="text-lg font-semibold">{value}</h3>
+                  {/* Hover effect for larger screens */}
+                  <p className="hidden group-hover:block text-gray-700 mt-2">
+                    {value === "Community Building"
+                      ? "We are committed to being honest, transparent, and accountable in all our actions."
+                      : value === "Teamwork"
+                      ? "Working together is key to achieving success and fostering innovation."
+                      : "We strive for the highest standards in everything we do."}
+                  </p>
+                  {/* Always visible on small screens */}
+                  <p className="block md:hidden text-gray-700 mt-2">
+                    {value === "Community Building"
+                      ? "We are committed to being honest, transparent, and accountable in all our actions."
+                      : value === "Teamwork"
+                      ? "Working together is key to achieving success and fostering innovation."
+                      : "We strive for the highest standards in everything we do."}
+                  </p>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+const OurHistory = () => {
+  return (
+    <div className="flex flex-col md:flex-row items-center justify-center py-12 bg-gray-100">
+      <div className="w-full max-w-6xl flex flex-col md:flex-row items-center">
+        {/* Image Section */}
+        <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
+          <img
+            src={history}
+            alt="Carousel Image"
+            className="w-full md:w-80 h-auto object-cover"
+          />
+        </div>
+        {/* Text Section */}
+        <div className="w-full md:w-1/2 p-4 md:p-12">
+          <div className="mb-6">
+            <h2 className="mb-4 text-2xl font-semibold">History</h2>
+            <p className="text-gray-700 text-lg">
+              At Ikeja Toastmasters, we believe in the power of communication
+              and leadership to transform lives. Founded in 1942, our
+              organization has grown into a community dedicated to helping
+              individuals develop their public speaking and leadership skills in
+              a supportive, experiential learning environment.
+            </p>
+          </div>
+          <div className="flex space-x-6 mt-8">
+            <button className="p-3 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none">
+              {/* Left Arrow */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button className="p-3 rounded-full bg-gray-300 hover:bg-gray-400 focus:outline-none">
+              {/* Right Arrow */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
@@ -169,19 +284,18 @@ const Offerings = () => {
       image: publicspeaking,
       title: "Public Speaking",
       subtitle:
-        "At Ikeja Toastmasters, we believe in the power ofcommunication and leadership to transform lives",
+        "At Ikeja Toastmasters, we believe in the power of communication and leadership to transform lives",
     },
     {
       image: publicspeaking,
-      title: "Public Speaking",
-      subtitle:
-        "At Ikeja Toastmasters, we believe in the power ofcommunication and leadership to transform lives",
+      title: "Team Collaboration",
+      subtitle: "Empowering individuals to work together effectively.",
     },
     {
       image: publicspeaking,
-      title: "Public Speaking",
+      title: "Leadership Training",
       subtitle:
-        "At Ikeja Toastmasters, we believe in the power ofcommunication and leadership to transform lives",
+        "Developing leadership skills for personal and professional growth.",
     },
   ];
 
@@ -206,9 +320,11 @@ const Offerings = () => {
             </div>
           ))}
         </div>
-        <button className="mt-8 px-6 py-3 bg-[#004165] text-white font-medium rounded-md hover:bg-[#5e1c25] transition">
-          Learn More
-        </button>
+        <Link to="/members">
+          <button className="mt-8 px-6 py-3 bg-[#004165] text-white font-medium rounded-md hover:bg-[#5e1c25] transition">
+            Join Us
+          </button>
+        </Link>
       </div>
     </section>
   );
@@ -219,33 +335,29 @@ const Testimonials = () => {
     {
       image: testimonials,
       title: "Testimonials: Watch Video",
-      subtitle: "Testimonials: Watch Video",
+      subtitle: "Hear from our members about their experiences.",
     },
     {
       image: testimonials,
       title: "Testimonials: Watch Video",
-      subtitle: "Testimonials: Watch Video",
+      subtitle: "Hear from our members about their experiences.",
     },
   ];
 
   return (
     <section className="py-16 bg-gray-100">
-      <div className="container mx-auto  px-8 sm:px-12 lg:px-16">
+      <div className="container mx-auto px-8 sm:px-12 lg:px-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
           {offerings.map((offering, index) => (
-            <div key={index} className="flex flex-col ">
+            <div key={index} className="flex flex-col">
               <div className="mb-6">
                 <img
                   src={offering.image}
                   alt={offering.title}
-                  className="w-full h-64 object-cover rounded-t-lg border border-gray-300" // Increased height to make the image larger
+                  className="w-full h-64 object-cover rounded-t-lg border border-gray-300"
                 />
-              </div>
-              <div className="">
-                <h3 className="text-2xl font-semibold mb-2">
-                  {offering.title}
-                </h3>
-                <p className="text-lg text-gray-600">{offering.subtitle}</p>
+                <h3 className="text-xl font-semibold mt-2">{offering.title}</h3>
+                <p className="text-gray-600">{offering.subtitle}</p>
               </div>
             </div>
           ))}
@@ -340,9 +452,12 @@ const Gallery = () => {
           <p className="text-lg mb-8">
             Discover the benefits of our offerings.
           </p>
-          <button className="px-6 py-3 bg-[#004165] text-white font-medium text-lg rounded-md hover:bg-blue-700 transition">
-            Get Started
-          </button>
+          <a href="/gallery">
+            {" "}
+            <button className="px-6 py-3 bg-[#004165] text-white font-medium text-lg rounded-md hover:bg-blue-700 transition">
+              Go to Gallery
+            </button>
+          </a>
         </div>
       </div>
     </section>
