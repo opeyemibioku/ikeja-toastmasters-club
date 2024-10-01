@@ -8,6 +8,7 @@ import Gallery from "./pages/gallery";
 import Contact from "./pages/contact";
 import Leaders from "./pages/leaders";
 import Members from "./pages/members";
+import { Footer } from "./components/footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="leaders" element={<Leaders />} />
         <Route path="members" element={<Members />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

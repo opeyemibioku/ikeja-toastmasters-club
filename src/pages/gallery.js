@@ -4,10 +4,12 @@ import { GalleryHero } from "../components/hero";
 import imageone from "../assets/images/gallery/imageone.png";
 import imagetwo from "../assets/images/gallery/imagetwo.png";
 import imagethree from "../assets/images/gallery/imagethree.png";
+import Navbar from "../components/navbar";
 
 const Gallery = () => {
   return (
     <>
+      <Navbar />
       <GalleryHero />
       <ThreeImageSection />
     </>

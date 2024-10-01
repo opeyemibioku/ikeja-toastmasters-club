@@ -1,9 +1,12 @@
 import React from "react";
 import { useRef } from "react";
 import bloghero from "../assets/images/blog/bloghero.png";
+import blogprev from "../assets/images/blog/blogpreview/blogprev.png";
+import Navbar from "../components/navbar";
 const BlogMain = () => {
   return (
     <>
+      <Navbar />
       <BlogBody />
       <BlogScroll />
     </>
@@ -45,32 +48,98 @@ const BlogBody = () => {
       {/* Quick Links Section */}
       <section className="mb-8">
         <h3 className="mb-4 font-bold text-lg pl-8 md:pl-20 lg:pl-32 xl:px-36">
-          Quick Links
+          QUICK LINKS
         </h3>
         <ul className="pl-8 md:pl-20 lg:pl-32 xl:px-36 text-blue-600 space-y-2">
-          <li className="flex items-center">
-            <span className="mr-2">↗</span>
-            <a href="#link1">Quick Link 1</a>
+          <li className="flex items-center text-black">
+            <span className="text-black">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17L17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
+            </span>
+            <a href="#link1">Introduction</a>
           </li>
-          <li className="flex items-center">
-            <span className="mr-2">↗</span>
-            <a href="#link2">Quick Link 2</a>
+          <li className="flex items-center text-black">
+            <span className="text-black">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17L17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
+            </span>
+            <a href="#link2">Case Study: In-depth vs Summarised approach</a>
           </li>
-          <li className="flex items-center">
-            <span className="mr-2">↗</span>
-            <a href="#link3">Quick Link 3</a>
+          <li className="flex items-center text-black">
+            <span className="text-black">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17L17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
+            </span>
+            <a href="#link3">Other resources</a>
           </li>
-          <li className="flex items-center">
-            <span className="mr-2">↗</span>
-            <a href="#link4">Quick Link 4</a>
+          <li className="flex items-center text-black">
+            <span className="text-black">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17L17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
+            </span>
+            <a href="#link4">Past Execs.</a>
           </li>
-          <li className="flex items-center">
-            <span className="mr-2">↗</span>
-            <a href="#link5">Quick Link 5</a>
-          </li>
-          <li className="flex items-center">
-            <span className="mr-2">↗</span>
-            <a href="#link6">Quick Link 6</a>
+          <li className="flex items-center text-black">
+            <span className="text-black">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17L17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
+            </span>
+            <a href="#link5">About us</a>
           </li>
         </ul>
       </section>
@@ -193,18 +262,18 @@ const BlogBody = () => {
         </p>
         <section className="mb-8 mt-4">
           <ol className="pl-8 md:pl-20 lg:pl-32 xl:px-40 text-blue-600 space-y-2 list-decimal">
-            <li>
+            <li className="text-black">
               <a href="#link1">
                 Lectus id duis vitae porttitor enim gravida morbi.
               </a>
             </li>
-            <li>
+            <li className="text-black">
               <a href="#link2">
                 Eu turpis posuere semper feugiat volutpat elit, ultrices
                 suspendisse. Auctor vel in vitae placerat.
               </a>
             </li>
-            <li>
+            <li className="text-black">
               <a href="#link3">
                 Suspendisse maecenas ac donec scelerisque diam sed est duis
                 purus.
@@ -244,248 +313,213 @@ const BlogBody = () => {
   );
 };
 
-// const BlogScroll = () => {
-//   const scrollRef = useRef(null);
+const blogCardsData = [
+  {
+    id: 1,
+    title: "Olivia Rhye",
+    subtitle: "",
+    additionalTitle: "UX review presentations",
+    additionalSubtitle:
+      "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    image: blogprev,
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 1
+  },
+  {
+    id: 2,
+    title: "Olivia Rhye",
+    subtitle: "",
+    additionalTitle: "UX review presentations",
+    additionalSubtitle:
+      "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    image: blogprev,
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 2
+  },
+  {
+    id: 3,
+    title: "Olivia Rhye",
+    subtitle: "",
+    additionalTitle: "UX review presentations",
+    additionalSubtitle:
+      "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    image: blogprev,
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 3
+  },
+  {
+    id: 4,
+    title: "Olivia Rhye",
+    subtitle: "",
+    additionalTitle: "UX review presentations",
+    additionalSubtitle:
+      "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    image: blogprev,
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 4
+  },
+  {
+    id: 5,
+    title: "Olivia Rhye",
+    subtitle: "",
+    additionalTitle: "UX review presentations",
+    additionalSubtitle:
+      "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    image: blogprev,
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 5
+  },
+  {
+    id: 6,
+    title: "Olivia Rhye",
+    subtitle: "",
+    additionalTitle: "UX review presentations",
+    additionalSubtitle:
+      "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    image: blogprev,
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 6
+  },
+  {
+    id: 7,
+    title: "Olivia Rhye",
+    subtitle: "",
+    additionalTitle: "UX review presentations",
+    additionalSubtitle:
+      "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    image: blogprev,
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 7
+  },
+  {
+    id: 8,
+    title: "Olivia Rhye",
+    subtitle: "",
+    additionalTitle: "UX review presentations",
+    additionalSubtitle:
+      "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    image: blogprev,
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 8
+  },
+  {
+    id: 9,
+    title: "Olivia Rhye",
+    subtitle: "",
+    additionalTitle: "UX review presentations",
+    additionalSubtitle:
+      "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    image: blogprev,
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 9
+  },
+  {
+    id: 10,
+    title: "Olivia Rhye",
+    subtitle: "",
+    additionalTitle: "UX review presentations",
+    additionalSubtitle:
+      "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    image: blogprev,
+    readMoreLink: "/blog-preview", // Unique link for Blog Card 10
+  },
+];
 
-//   // Function to scroll cards horizontally
-//   const scroll = (direction) => {
-//     const scrollAmount = 300; // Customize scroll amount as needed
-//     if (direction === "left") {
-//       scrollRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-//     } else {
-//       scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-//     }
-//   };
-
-//   return (
-//     <div className="py-16 relative">
-//       <p className="text-lg text-gray-700 pl-8 md:pl-20 lg:pl-32 xl:px-36 ">
-//         Latest posts
-//       </p>
-//       <h2 className="text-2xl lg:text-3xl font-semibold mb-4 pl-8 md:pl-20 lg:pl-32 xl:px-36 mt-4">
-//         Ikeja toastmasters Blog
-//       </h2>
-//       <p className="text-lg text-gray-700 pl-8 md:pl-20 lg:pl-32 xl:px-36 mt-4">
-//         Interviews, tips, guides, industry best practices, and news.
-//       </p>
-
-//       {/* Card Section with Horizontal Scroll */}
-//       <div className="relative">
-//         {/* Cards Wrapper */}
-//         <div
-//           className="flex overflow-x-auto space-x-6 scrollbar-hide"
-//           ref={scrollRef}
-//           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }} // Hide scrollbar for Firefox
-//         >
-//           {/* Card */}
-//           <div className="min-w-[300px] bg-white shadow-md rounded-lg">
-//             <img src={bloghero} alt="Card 1" className="mb-4 mx-auto" />
-//             <h3 className="text-xl font-semibold mb-2 px-6">Card Title 1</h3>
-//             <p className="text-gray-700 px-6">
-//               This is the description for card 1.
-//             </p>
-//           </div>
-
-//           {/* Additional Cards */}
-//           <div className="min-w-[300px] bg-white shadow-md rounded-lg">
-//             <img src={bloghero} alt="Card 2" className="mb-4 mx-auto" />
-//             <h3 className="text-xl font-semibold mb-2 px-6">Card Title 2</h3>
-//             <p className="text-gray-700 px-6">
-//               This is the description for card 2.
-//             </p>
-//           </div>
-
-//           <div className="min-w-[300px] bg-white shadow-md rounded-lg">
-//             <img src={bloghero} alt="Card 3" className="mb-4 mx-auto" />
-//             <h3 className="text-xl font-semibold mb-2 px-6">Card Title 3</h3>
-//             <p className="text-gray-700 px-6">
-//               This is the description for card 3.
-//             </p>
-//           </div>
-
-//           <div className="min-w-[300px] bg-white shadow-md rounded-lg">
-//             <img src={bloghero} alt="Card 4" className="mb-4 mx-auto" />
-//             <h3 className="text-xl font-semibold mb-2 px-6">Card Title 4</h3>
-//             <p className="text-gray-700 px-6">
-//               This is the description for card 4.
-//             </p>
-//           </div>
-
-//           <div className="min-w-[300px] bg-white shadow-md rounded-lg">
-//             <img src={bloghero} alt="Card 5" className="mb-4 mx-auto" />
-//             <h3 className="text-xl font-semibold mb-2 px-6">Card Title 5</h3>
-//             <p className="text-gray-700 px-6">
-//               This is the description for card 5.
-//             </p>
-//           </div>
-
-//           <div className="min-w-[300px] bg-white shadow-md rounded-lg">
-//             <img src={bloghero} alt="Card 6" className="mb-4 mx-auto" />
-//             <h3 className="text-xl font-semibold mb-2 px-6">Card Title 6</h3>
-//             <p className="text-gray-700 px-6">
-//               This is the description for card 6.
-//             </p>
-//           </div>
-//         </div>
-
-//         {/* Scroll Buttons (Arrows) */}
-//         <div className="absolute top-full left-0 mt-2">
-//           <button
-//             onClick={() => scroll("left")}
-//             className="p-2 bg-transparent text-blue-500 hover:text-blue-700"
-//           >
-//             ←
-//           </button>
-//           <button
-//             onClick={() => scroll("right")}
-//             className="p-2 bg-transparent text-blue-500 hover:text-blue-700"
-//           >
-//             →
-//           </button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
+const BlogCard = ({ title, subtitle, image }) => (
+  <div className="min-w-[30rem] bg-white shadow-md rounded-lg overflow-hidden mx-2 mb-8">
+    <img src={image} alt={title} className="w-full h-48 object-cover" />
+    <div className="p-4">
+      <h2 className="text-lg font-semibold">{title}</h2>
+      <p className="text-gray-600">{subtitle}</p>
+    </div>
+  </div>
+);
 
 const BlogScroll = () => {
   const scrollRef = useRef(null);
 
-  // Card data array
-  const cards = [
-    {
-      id: 1,
-      image: bloghero, // Replace with the actual image path or import
-      imageTitle: "Image Title 1",
-      imageSubtitle: "Image Subtitle 1",
-      title: "Card Title 1",
-      description: "This is the description for card 1.",
-    },
-    {
-      id: 2,
-      image: bloghero, // Replace with the actual image path or import
-      imageTitle: "Image Title 2",
-      imageSubtitle: "Image Subtitle 2",
-      title: "Card Title 2",
-      description: "This is the description for card 2.",
-    },
-    {
-      id: 3,
-      image: bloghero, // Replace with the actual image path or import
-      imageTitle: "Image Title 3",
-      imageSubtitle: "Image Subtitle 3",
-      title: "Card Title 3",
-      description: "This is the description for card 3.",
-    },
-    {
-      id: 4,
-      image: bloghero, // Replace with the actual image path or import
-      imageTitle: "Image Title 4",
-      imageSubtitle: "Image Subtitle 4",
-      title: "Card Title 4",
-      description: "This is the description for card 4.",
-    },
-    {
-      id: 5,
-      image: bloghero, // Replace with the actual image path or import
-      imageTitle: "Image Title 5",
-      imageSubtitle: "Image Subtitle 5",
-      title: "Card Title 5",
-      description: "This is the description for card 5.",
-    },
-    {
-      id: 6,
-      image: bloghero, // Replace with the actual image path or import
-      imageTitle: "Image Title 6",
-      imageSubtitle: "Image Subtitle 6",
-      title: "Card Title 6",
-      description: "This is the description for card 6.",
-    },
-  ];
-
-  // Function to scroll cards horizontally
   const scroll = (direction) => {
-    const scrollAmount = 300; // Customize scroll amount as needed
-    if (direction === "left") {
-      scrollRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    } else {
+    const scrollAmount = direction === "left" ? -300 : 300;
+    if (scrollRef.current) {
       scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
 
   return (
-    <div className="py-16 relative">
-      <p className="text-lg text-gray-700 pl-8 md:pl-20 lg:pl-32 xl:px-36 ">
-        Latest posts
-      </p>
-      <h2 className="text-2xl lg:text-3xl font-semibold mb-4 pl-8 md:pl-20 lg:pl-32 xl:px-36 mt-4">
-        Ikeja Toastmasters Blog
-      </h2>
-      <p className="text-lg text-gray-700 pl-8 md:pl-20 lg:pl-32 xl:px-36 mt-4 mb-8">
+    <div className="pl-32">
+      <p>Latest posts</p>
+      <h1 className="text-2xl font-bold mb-4">Ikeja toastmasters Blog</h1>
+      <p className="mb-8">
         Interviews, tips, guides, industry best practices, and news.
       </p>
-
-      {/* Card Section with Horizontal Scroll */}
-      <div className="relative">
-        {/* Cards Wrapper */}
-        <div
-          className="flex overflow-x-auto space-x-6 scrollbar-hide"
-          ref={scrollRef}
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }} // Hide scrollbar for Firefox
-        >
-          {/* Image Card */}
-          {cards.map((card) => (
-            <div
-              key={card.id}
-              className="min-w-[300px] bg-white shadow-none rounded-lg relative"
-            >
-              <div className="relative">
-                <img
-                  src={card.image}
-                  alt={`Card ${card.id}`}
-                  className="mb-4 mx-auto h-48 w-full object-cover " // Adjust height and maintain aspect ratio
-                />
-                {/* Overlay Text for Image at the Bottom */}
-                <div className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-75 p-2 rounded-b-lg">
-                  <h4 className="font-semibold">{card.imageTitle}</h4>
-                  <p className="text-sm text-gray-600">{card.imageSubtitle}</p>
-                </div>
-              </div>
-              {/* Blurred Container */}
-              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-white bg-opacity-50 backdrop-blur-md rounded-b-lg"></div>
-              <div className="relative z-10">
-                {/* Ensure content is above the blurred background */}
-                <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
-                <p className="text-gray-700 mb-4">{card.description}</p>
-                {/* Read Post Link */}
-                <div className="flex items-center justify-start mb-4">
-                  <a
-                    href="#readPost"
-                    className="text-blue-500 hover:text-blue-700 flex items-center"
+      <div
+        className="flex overflow-x-scroll scrollbar-hide py-2"
+        ref={scrollRef}
+      >
+        {blogCardsData.map((card) => (
+          <div key={card.id} className="flex flex-col items-start mx-2 mb-8">
+            <BlogCard
+              title={card.title}
+              subtitle={card.subtitle}
+              image={card.image}
+            />
+            {/* Additional Title and Subtitle Below Card */}
+            <div className="px-4">
+              <h3 className="text-lg font-semibold">{card.additionalTitle}</h3>
+              <p className="text-gray-500">{card.additionalSubtitle}</p>
+              <a
+                href={card.readMoreLink} // Use the unique link for each blog card
+                className="text-[#772432] flex items-center mt-2" // Change to your specified color
+              >
+                Read Post
+                <span className="text-[#772432]">
+                  {" "}
+                  {/* Apply the same color to the icon */}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
-                    Read Post <span className="ml-2">↗</span>
-                  </a>
-                </div>
-              </div>
+                    <path d="M7 17L17 7" />
+                    <path d="M7 7h10v10" />
+                  </svg>
+                </span>
+              </a>
             </div>
-          ))}
-        </div>
-
-        {/* Scroll Buttons (Arrows) */}
-        <div className="absolute top-full left-0 mt-2">
-          <button
-            onClick={() => scroll("left")}
-            className="p-2 bg-transparent text-blue-500 hover:text-blue-700"
+          </div>
+        ))}
+      </div>
+      <div className="flex justify-center my-4">
+        <button
+          onClick={() => scroll("left")}
+          className="bg-white text-black rounded-full w-10 h-10 flex items-center justify-center mx-2 shadow-lg hover:shadow-xl transition-shadow"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
-            ←
-          </button>
-          <button
-            onClick={() => scroll("right")}
-            className="p-2 bg-transparent text-blue-500 hover:text-blue-700"
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <button
+          onClick={() => scroll("right")}
+          className="bg-white text-black rounded-full w-10 h-10 flex items-center justify-center mx-2 shadow-lg hover:shadow-xl transition-shadow"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
-            →
-          </button>
-        </div>
+            <path d="M9 6l6 6-6 6" />
+          </svg>
+        </button>
       </div>
     </div>
   );

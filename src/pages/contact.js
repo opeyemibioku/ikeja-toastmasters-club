@@ -6,10 +6,12 @@ import emailicon from "../assets/images/contact/emailicon.png";
 import officeicon from "../assets/images/contact/officeicon.png";
 import phoneicon from "../assets/images/contact/phoneicon.png";
 import contact from "../assets/images/contact/contact.png";
+import Navbar from "../components/navbar";
 
 const Contact = () => {
   return (
     <>
+      <Navbar />
       <ContactHero />
       <LayoutSection />
       <ContactForm />
@@ -67,7 +69,7 @@ const ContactForm = () => {
           <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
           <p>Welcome back Titilayo, Enter your details</p>
           <form>
-            <div className="mb-4">
+            <div className="mb-4 mt-8">
               <label className="block text-gray-700 mb-2" htmlFor="name">
                 Name
               </label>
@@ -105,9 +107,9 @@ const ContactForm = () => {
             </div>
             <button
               type="submit"
-              className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+              className="bg-[#004165] text-white py-2 px-4 rounded hover:bg-[#005d78] transition-colors"
             >
-              Send Message
+              Send
             </button>
           </form>
         </div>

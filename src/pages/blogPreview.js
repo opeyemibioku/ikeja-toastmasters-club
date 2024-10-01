@@ -4,10 +4,12 @@ import { BlogPreviewHero } from "../components/hero";
 import heroimage from "../assets/images/home/hero.jpg";
 import blog from "../assets/images/blog/blog.png";
 import blogprev from "../assets/images/blog/blogpreview/blogprev.png";
+import Navbar from "../components/navbar";
 
 const BlogPreview = () => {
   return (
     <>
+      <Navbar />
       <BlogPreviewHero />
       <BackgroundSection />
       <BlogSection />
@@ -19,7 +21,7 @@ const BackgroundSection = () => {
   return (
     <>
       <section
-        className="relative bg-cover bg-center py-72 mx-4 sm:mx-8 lg:mx-16 -mt-32" // Adjusted padding to reduce height
+        className="relative bg-cover bg-center py-72 mx-4 sm:mx-8 lg:mx-16 -mt-20" // Adjusted padding to reduce height
         style={{ backgroundImage: `url(${blog})` }}
       >
         {/* Optional Content Overlay if needed */}
@@ -27,24 +29,42 @@ const BackgroundSection = () => {
           {/* You can add any overlay text or elements here */}
         </div>
       </section>
-      <section className="py-16">
+      <section className="pb-16 pt-8">
         <div className="mx-auto space-y-4">
-          <p className="text-2xl font-semibold text-gray-800 ml-16">
+          <p className="font-semibold text-[#094F72] ml-16">
             Titilayo Ekundayo • June 24th, 2024
           </p>
-          <h2 className="text-4xl font-bold mb-8 ml-16">
+          <h2 className="text-3xl font-bold mb-8 ml-16">
             UX review presentations
           </h2>
-          <h3 className="text-2xl font-semibold text-gray-800 ml-16">
+          <p className="text-gray-800 ml-16">
             How do you create compelling presentations that wow your colleagues
             and impress your managers?
-          </h3>
+          </p>
           <div className="flex items-center justify-start mb-4 pl-16">
             <a
               href="#readPost"
-              className="text-blue-500 hover:text-blue-700 flex items-center"
+              className="text-[#094F72] hover:text-blue-700 flex items-center" // Updated color
             >
-              Read Post <span className="ml-2">↗</span>
+              Read Post{" "}
+              <span className="text-[#094F72]">
+                {" "}
+                {/* Updated arrow color */}
+                {/* Top-right arrow (SVG) */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M7 17L17 7" />
+                  <path d="M7 7h10v10" />
+                </svg>
+              </span>
             </a>
           </div>
         </div>
@@ -54,11 +74,11 @@ const BackgroundSection = () => {
 };
 
 const cardsData = {
-  category1: [
+  meetingRundowns: [
     {
       id: 1,
-      title: "Card 1A",
-      subtitle: "Subtitle 1A",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
       image: blogprev,
       postAuthor: "Titlayo Ekundayo",
       postTitle: "UX review",
@@ -66,8 +86,8 @@ const cardsData = {
     },
     {
       id: 3,
-      title: "Card 3A",
-      subtitle: "Subtitle 3A",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
       image: blogprev,
       postAuthor: "Titlayo Ekundayo",
       postTitle: "UX review",
@@ -75,8 +95,8 @@ const cardsData = {
     },
     {
       id: 2,
-      title: "Card 2A",
-      subtitle: "Subtitle 2A",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
       image: blogprev,
       postAuthor: "Titlayo Ekundayo",
       postTitle: "UX review",
@@ -84,8 +104,8 @@ const cardsData = {
     },
     {
       id: 4,
-      title: "Card 4A",
-      subtitle: "Subtitle 4A",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
       image: blogprev,
       postAuthor: "Titlayo Ekundayo",
       postTitle: "UX review",
@@ -93,132 +113,132 @@ const cardsData = {
     },
     {
       id: 5,
-      title: "Card 5A",
-      subtitle: "Subtitle 5A",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
       image: blogprev,
       postTitle: "UX review",
       postSubtitle: "How do you create compelling presentations",
     },
     {
       id: 6,
-      title: "Card 6A",
-      subtitle: "Subtitle 6A",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
       image: blogprev,
       postTitle: "UX review",
       postSubtitle: "How do you create compelling presentations",
     },
     {
       id: 7,
-      title: "Card 7A",
-      subtitle: "Subtitle 7A",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
       image: blogprev,
       postTitle: "UX review",
       postSubtitle: "How do you create compelling presentations",
     },
     {
       id: 8,
-      title: "Card 8A",
-      subtitle: "Subtitle 8A",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
       image: blogprev,
       postTitle: "UX review",
       postSubtitle: "How do you create compelling presentations",
     },
     {
       id: 9,
-      title: "Card 8A",
-      subtitle: "Subtitle 8A",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
       image: blogprev,
       postTitle: "UX review",
       postSubtitle: "How do you create compelling presentations",
     },
     {
       id: 10,
-      title: "Card 8A",
-      subtitle: "Subtitle 8A",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
       image: blogprev,
       postTitle: "UX review",
       postSubtitle: "How do you create compelling presentations",
     },
     // Add more cards as needed
   ],
-  category2: [
+  events: [
     {
       id: 1,
-      title: "Card 1B",
-      subtitle: "Subtitle 1B",
-      image: "image1b.png",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
+      image: blogprev,
       postTitle: "UX review",
       postSubtitle: "How do you create compelling presentations",
     },
     {
       id: 2,
-      title: "Card 2B",
-      subtitle: "Subtitle 2B",
-      image: "image2b.png",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
+      image: blogprev,
       postTitle: "UX review",
       postSubtitle: "How do you create compelling presentations",
     },
     {
       id: 3,
-      title: "Card 3B",
-      subtitle: "Subtitle 3B",
-      image: "image3b.png",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
+      image: blogprev,
       postTitle: "UX review",
       postSubtitle: "How do you create compelling presentations",
     },
     {
       id: 4,
-      title: "Card 4B",
-      subtitle: "Subtitle 4B",
-      image: "image4b.png",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
+      image: blogprev,
       postTitle: "UX review",
       postSubtitle: "How do you create compelling presentations",
     },
     {
       id: 5,
-      title: "Card 5B",
-      subtitle: "Subtitle 5B",
-      image: "image5b.png",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
+      image: blogprev,
       postTitle: "UX review",
       postSubtitle: "How do you create compelling presentations",
     },
     {
       id: 6,
-      title: "Card 6B",
-      subtitle: "Subtitle 6B",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
       image: "image6b.png",
       postTitle: "UX review",
       postSubtitle: "How do you create compelling presentations",
     },
     {
       id: 7,
-      title: "Card 7B",
-      subtitle: "Subtitle 7B",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
       image: "image7b.png",
       postTitle: "UX review",
       postSubtitle: "How do you create compelling presentations",
     },
     {
       id: 8,
-      title: "Card 8B",
-      subtitle: "Subtitle 8B",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
       image: "image8b.png",
       postTitle: "UX review",
       postSubtitle: "How do you create compelling presentations",
     },
   ],
-  category3: [
+  newsArticles: [
     {
       id: 1,
-      title: "Card 1C",
-      subtitle: "Subtitle 1C",
+      title: "Olivia Rhye",
+      subtitle: "20 Jan 2024",
       image: "image1c.png",
       postTitle: "UX review",
       postSubtitle: "How do you create compelling presentations",
     },
     {
       id: 2,
-      title: "Card 2C",
+      title: "Olivia Rhye",
       subtitle: "Subtitle 2C",
       image: "image2c.png",
       postTitle: "UX review",
@@ -226,7 +246,7 @@ const cardsData = {
     },
     {
       id: 3,
-      title: "Card 3C",
+      title: "Olivia Rhye",
       subtitle: "Subtitle 3C",
       image: "image3c.png",
       postTitle: "UX review",
@@ -234,7 +254,7 @@ const cardsData = {
     },
     {
       id: 4,
-      title: "Card 4C",
+      title: "Olivia Rhye",
       subtitle: "Subtitle 4C",
       image: "image4c.png",
       postTitle: "UX review",
@@ -242,7 +262,7 @@ const cardsData = {
     },
     {
       id: 5,
-      title: "Card 5C",
+      title: "Olivia Rhye",
       subtitle: "Subtitle 5C",
       image: "image5c.png",
       postTitle: "UX review",
@@ -250,7 +270,7 @@ const cardsData = {
     },
     {
       id: 6,
-      title: "Card 6C",
+      title: "Olivia Rhye",
       subtitle: "Subtitle 6C",
       image: "image6c.png",
       postTitle: "UX review",
@@ -258,7 +278,7 @@ const cardsData = {
     },
     {
       id: 7,
-      title: "Card 7C",
+      title: "Olivia Rhye",
       subtitle: "Subtitle 7C",
       image: "image7c.png",
       postTitle: "UX review",
@@ -266,17 +286,17 @@ const cardsData = {
     },
     {
       id: 8,
-      title: "Card 8C",
+      title: "Olivia Rhye",
       subtitle: "Subtitle 8C",
       image: "image8c.png",
       postTitle: "UX review",
       postSubtitle: "How do you create compelling presentations",
     },
   ],
-  category4: [
+  greatSpeeches: [
     {
       id: 1,
-      title: "Card 1D",
+      title: "Olivia Rhye",
       subtitle: "Subtitle 1D",
       image: "image1d.png",
       postTitle: "UX review",
@@ -354,11 +374,30 @@ const Card = ({ title, subtitle, image }) => (
 const PostInfo = ({ postAuthor, postTitle, postSubtitle }) => (
   <div className="mt-2">
     <p className="text-gray-500">{postAuthor}</p>
-    <h4 className="text-lg font-semibold">{postTitle}</h4>
+    <h4 className="text-lg font-semibold mt-8">{postTitle}</h4>
     <p className="text-gray-500">{postSubtitle}</p>
-    <button className="text-blue-600 flex items-center">
+    <button className="text-[#094F72] flex items-center mt-4 mb-8">
+      {" "}
+      {/* Updated text color */}
       Read Post
-      <span className="ml-1">↗</span> {/* Right arrow icon */}
+      <span className="text-[#094F72]">
+        {" "}
+        {/* Updated arrow color */}
+        {/* Top-right arrow (SVG) */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M7 17L17 7" />
+          <path d="M7 7h10v10" />
+        </svg>
+      </span>
     </button>
   </div>
 );
@@ -402,7 +441,7 @@ const BlogSection = () => {
 
   return (
     <section className="py-16">
-      <div className="flex mb-8 pl-4 md:pl-8 lg:pl-16">
+      {/* <div className="flex mb-8 pl-4 md:pl-8 lg:pl-16">
         <button className="mx-2 text-lg font-bold" onClick={handleViewAll}>
           View All
         </button>
@@ -417,7 +456,26 @@ const BlogSection = () => {
             {category.replace("category", "Category ")}
           </button>
         ))}
+      </div> */}
+      <div className="flex mb-8 pl-4 md:pl-8 lg:pl-16">
+        <button className="mx-2 text-lg font-bold" onClick={handleViewAll}>
+          View All
+        </button>
+        {Object.keys(cardsData).map((category) => (
+          <button
+            key={category}
+            className={`mx-2 text-lg ${
+              activeCategory === category ? "font-bold" : ""
+            }`}
+            onClick={() => handleCategoryChange(category)}
+          >
+            {category.charAt(0).toUpperCase() +
+              category.slice(1).replace(/([A-Z])/g, " $1")}{" "}
+            {/* // Converts keys to a readable format */}
+          </button>
+        ))}
       </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4 px-4 sm:px-6 md:px-8 lg:px-16">
         {currentCards.map((card) => (
           <div key={card.id} className="">
@@ -436,8 +494,8 @@ const BlogSection = () => {
           </div>
         ))}
       </div>
-      =
-      <div className="flex justify-between items-center mt-8">
+
+      <div className="flex justify-between items-center mt-8 px-16">
         <button
           onClick={() => setCurrentPage(currentPage - 1)}
           disabled={currentPage === 1}

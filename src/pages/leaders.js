@@ -2,10 +2,12 @@ import { useRef } from "react";
 import { LeadersHero } from "../components/hero";
 import leadership from "../assets/images/about/leadership.png";
 import event from "../assets/images/leaders/event.png";
+import Navbar from "../components/navbar";
 
 const Leaders = () => {
   return (
     <>
+      <Navbar />
       <LeadersHero />
       <Leadership />
       <Quotes />
@@ -18,50 +20,52 @@ const Leadership = () => {
   const offerings = [
     {
       image: leadership,
-      title: "Offering 1",
-      subtitle: "Subtitle for offering 1",
+      title: "President",
+      subtitle: "Titilayo Ekundayo",
     },
     {
       image: leadership,
-      title: "Offering 2",
-      subtitle: "Subtitle for offering 2",
+      title: "President",
+      subtitle: "Titilayo Ekundayo",
     },
     {
       image: leadership,
-      title: "Offering 3",
-      subtitle: "Subtitle for offering 3",
+      title: "President",
+      subtitle: "Titilayo Ekundayo",
     },
     {
       image: leadership,
-      title: "Offering 4",
-      subtitle: "Subtitle for offering 4",
+      title: "President",
+      subtitle: "Titilayo Ekundayo",
     },
     {
       image: leadership,
-      title: "Offering 4",
-      subtitle: "Subtitle for offering 4",
+      title: "President",
+      subtitle: "Titilayo Ekundayo",
     },
     {
       image: leadership,
-      title: "Offering 4",
-      subtitle: "Subtitle for offering 4",
+      title: "President",
+      subtitle: "Titilayo Ekundayo",
     },
     {
       image: leadership,
-      title: "Offering 4",
-      subtitle: "Subtitle for offering 4",
+      title: "President",
+      subtitle: "Titilayo Ekundayo",
     },
     {
       image: leadership,
-      title: "Offering 4",
-      subtitle: "Subtitle for offering 4",
+      title: "President",
+      subtitle: "Titilayo Ekundayo",
     },
   ];
 
   return (
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-8 sm:px-12 lg:px-16">
-        <h2 className="text-4xl font-bold mb-12 ">Past Presidents</h2>
+        <h2 className="text-4xl font-bold mb-12 ">
+          Past Presidents <span className="font-md">(2011-Current)</span>
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {offerings.map((offering, index) => (
             <div key={index} className="flex flex-col">
@@ -73,10 +77,8 @@ const Leadership = () => {
                 />
               </div>
               <div className="text-left">
-                <h3 className="text-2xl font-semibold mb-2">
-                  {offering.title}
-                </h3>
-                <p className="text-lg text-gray-600">{offering.subtitle}</p>
+                <p className="text-lg text-gray-600 mb-2">{offering.title}</p>
+                <h3 className="text-2xl font-semibold">{offering.subtitle}</h3>
               </div>
             </div>
           ))}
@@ -90,39 +92,39 @@ const testimonialsData = [
   {
     id: 1,
     text: "“In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have lost or never attained, living by voices we shall never hear.”",
-    author: "Jane Doe",
+    author: "— Titilayo Ekundayo, President, Ikeja Toastmasters.",
   },
   {
     id: 2,
     text: "“In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have lost or never attained, living by voices we shall never hear.”",
-    author: "John Smith",
+    author: "— Titilayo Ekundayo, President, Ikeja Toastmasters.",
   },
   {
     id: 3,
     text: "“In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have lost or never attained, living by voices we shall never hear.”",
-    author: "Alice Johnson",
+    author: "— Titilayo Ekundayo, President, Ikeja Toastmasters.",
   },
   {
     id: 4,
     text: "“In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have lost or never attained, living by voices we shall never hear.”",
-    author: "Bob Brown",
+    author: "— Titilayo Ekundayo, President, Ikeja Toastmasters.",
   },
   {
     id: 5,
     text: "“In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have lost or never attained, living by voices we shall never hear.”",
-    author: "Sarah Wilson",
+    author: "— Titilayo Ekundayo, President, Ikeja Toastmasters.",
   },
   {
     id: 6,
     text: "“In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have lost or never attained, living by voices we shall never hear.”",
-    author: "Chris Lee",
+    author: "— Titilayo Ekundayo, President, Ikeja Toastmasters.",
   },
 ];
 
 const TestimonialCard = ({ text, author }) => (
   <div className="min-w-[30rem] overflow-hidden mx-2 mb-8 pt-8">
-    <p className="text-gray-600 text-white">{text}</p>
-    <p className="text-left font-semibold mt-4 text-white">{author}</p>
+    <p className="text-gray-600 font-md text-white">{text}</p>
+    <p className="text-left mt-4 text-white">{author}</p>
   </div>
 );
 
@@ -138,7 +140,9 @@ const Quotes = () => {
 
   return (
     <div className="pl-32 bg-[#004165] py-8">
-      <h1 className="text-2xl font-bold mt-8 text-white">Testimonials</h1>
+      <h1 className="text-2xl font-bold mt-8 text-white">
+        Past Presidents Quotes
+      </h1>
       <div
         className="flex overflow-x-scroll scrollbar-hide pb-8"
         ref={scrollRef}
@@ -151,20 +155,20 @@ const Quotes = () => {
           />
         ))}
       </div>
-      <div className="flex justify-center mt-4">
+      {/* <div className="flex justify-center mt-4">
         <button
           onClick={() => scroll("left")}
           className="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center mx-2 hover:bg-blue-600 transition-colors"
         >
-          &lt; {/* Left Arrow */}
+          &lt; 
         </button>
         <button
           onClick={() => scroll("right")}
           className="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center mx-2 hover:bg-blue-600 transition-colors"
         >
-          &gt; {/* Right Arrow */}
+          &gt; 
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -174,47 +178,47 @@ const imageData = [
   {
     id: 1,
     src: event,
-    text: "Image 1",
+    text: "Meetings",
   },
   {
     id: 2,
     src: event,
-    text: "Image 2",
+    text: "Meetings",
   },
   {
     id: 3,
     src: event,
-    text: "Image 3",
+    text: "Meetings",
   },
   {
     id: 4,
     src: event,
-    text: "Image 4",
+    text: "Meetings",
   },
   {
     id: 5,
     src: event,
-    text: "Image 5",
+    text: "Meetings",
   },
   {
     id: 6,
     src: event,
-    text: "Image 6",
+    text: "Meetings",
   },
   {
     id: 7,
     src: event,
-    text: "Image 7",
+    text: "Meetings",
   },
   {
     id: 8,
     src: event,
-    text: "Image 8",
+    text: "Meetings",
   },
   {
     id: 9,
     src: event,
-    text: "Image 9",
+    text: "Meetings",
   },
 ];
 
@@ -226,21 +230,21 @@ const ImageCard = ({ src, text }) => (
     </div>
 
     <div className="absolute bottom-2 left-2">
-      <span className="ml-2 text-white">↗</span>
-      {/* <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 text-white"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
+      <span className="ml-2 text-white ">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth="2"
-          d="M7 7l10 10-10 10"
-        />
-      </svg> */}
+        >
+          <path d="M7 17L17 7" />
+          <path d="M7 7h10v10" />
+        </svg>
+      </span>
     </div>
   </div>
 );
@@ -257,8 +261,8 @@ const ImageGrid = () => {
 
 const Events = () => {
   return (
-    <div>
-      <h1 className="text-2xl font-bold text-center my-4">Image Section</h1>
+    <div className="px-16">
+      <h1 className="text-2xl font-bold my-4 pl-4 mt-8">Milestone Events</h1>
       <ImageGrid />
     </div>
   );

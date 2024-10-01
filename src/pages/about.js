@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Navbar from "../components/navbar";
 import abouthero from "../assets/images/about/abouthero.png";
 import history from "../assets/images/about/history.png";
 import publicspeaking from "../assets/images/about/publicspeaking.png";
@@ -13,6 +14,7 @@ import whatwedo from "../assets/images/home/whatwedo.png";
 const About = () => {
   return (
     <>
+      <Navbar />
       <Hero />
       <OurHistory />
       <Offerings />
@@ -29,9 +31,9 @@ const Hero = () => {
   return (
     <>
       <section class="relative flex flex-col-reverse md:flex-row items-center justify-around gap-8 p-8 md:p-16">
-        <div class="md:w-6/12 space-y-4">
+        <div class="md:w-5/12 space-y-4">
           <p class="text-lg md:text-xl text-gray-700">ABOUT US</p>
-          <h1 class="text-3xl md:text-4xl font-bold">
+          <h1 class="text-3xl md:text-4xl font-bold text-[#094F72]">
             Helping individuals develop their public speaking and leadership
             skills in a supportive and encouraging environment
           </h1>
@@ -49,10 +51,10 @@ const Hero = () => {
 
       <section class="relative flex flex-col p-8 md:p-16">
         <div class="md:w-6/12 space-y-4">
-          <h2 class="text-2xl md:text-3xl font-bold">Our Values</h2>
+          <h2 class="pl-4">OUR VALUES</h2>
           <div class="space-y-4 md:space-y-0">
-            <div class="group md:cursor-pointer md:hover:bg-gray-100 p-4 rounded-md transition-all relative">
-              <h3 class="text-lg font-semibold">Integrity</h3>
+            <div class="group md:cursor-pointer p-4 rounded-md transition-all relative">
+              <h3 class="text-lg font-semibold">Community Building</h3>
               <p class="hidden md:group-hover:block text-gray-700 mt-2">
                 We are committed to being honest, transparent, and accountable
                 in all our actions.
@@ -63,8 +65,8 @@ const Hero = () => {
               </p>
             </div>
 
-            <div class="group md:cursor-pointer md:hover:bg-gray-100 p-4 rounded-md transition-all relative">
-              <h3 class="text-lg font-semibold">Collaboration</h3>
+            <div class="group md:cursor-pointer p-4 rounded-md transition-all relative">
+              <h3 class="text-lg font-semibold">Community Building</h3>
               <p class="hidden md:group-hover:block text-gray-700 mt-2">
                 Working together is key to achieving success and fostering
                 innovation.
@@ -75,8 +77,9 @@ const Hero = () => {
               </p>
             </div>
 
-            <div class="group md:cursor-pointer md:hover:bg-gray-100 p-4 rounded-md transition-all relative">
-              <h3 class="text-lg font-semibold">Excellence</h3>
+            <div class="group md:cursor-pointer p-4 rounded-md transition-all relative">
+              {/* <div class="group md:cursor-pointer md:hover:bg-gray-100 p-4 rounded-md transition-all relative"> */}
+              <h3 class="text-lg font-semibold">Community Building</h3>
               <p class="hidden md:group-hover:block text-gray-700 mt-2">
                 We strive for the highest standards in everything we do.
               </p>
@@ -104,12 +107,19 @@ const OurHistory = () => {
           </div>
           <div class="w-3/4 p-12">
             <div class="mb-6">
-              <h2 class="text-4xl font-bold mb-4">Carousel Title</h2>
+              <h2 class="mb-4">History</h2>
               <p class="text-gray-700 text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis
-                urna at eros bibendum blandit. Integer tristique venenatis dui,
-                non vulputate justo gravida sit amet. Curabitur at dignissim
-                elit, at vehicula magna.
+                At Ikeja Toastmasters, we believe in the power of communication
+                and leadership to transform lives. Founded in 1942, our
+                organization has grown into a community dedicated to to helping
+                individuals develop their public speaking and leadership skills
+                in a supportive, experiential learning environment. <br />{" "}
+                <br />
+                At Ikeja Toastmasters, we believe in the power of communication
+                and leadership to transform lives. Founded in 1942, our
+                organization has grown into a community dedicated to to helping
+                individuals develop their public speaking and leadership skills
+                in a supportive, experiential learning environment.
               </p>
             </div>
             <div class="flex  space-x-6 mt-8">
@@ -157,18 +167,21 @@ const Offerings = () => {
   const offerings = [
     {
       image: publicspeaking,
-      title: "Offering 1",
-      subtitle: "Subtitle for offering 1",
+      title: "Public Speaking",
+      subtitle:
+        "At Ikeja Toastmasters, we believe in the power ofcommunication and leadership to transform lives",
     },
     {
       image: publicspeaking,
-      title: "Offering 2",
-      subtitle: "Subtitle for offering 2",
+      title: "Public Speaking",
+      subtitle:
+        "At Ikeja Toastmasters, we believe in the power ofcommunication and leadership to transform lives",
     },
     {
       image: publicspeaking,
-      title: "Offering 3",
-      subtitle: "Subtitle for offering 3",
+      title: "Public Speaking",
+      subtitle:
+        "At Ikeja Toastmasters, we believe in the power ofcommunication and leadership to transform lives",
     },
   ];
 
@@ -205,13 +218,13 @@ const Testimonials = () => {
   const offerings = [
     {
       image: testimonials,
-      title: "Offering A",
-      subtitle: "Subtitle for offering A",
+      title: "Testimonials: Watch Video",
+      subtitle: "Testimonials: Watch Video",
     },
     {
       image: testimonials,
-      title: "Offering B",
-      subtitle: "Subtitle for offering B",
+      title: "Testimonials: Watch Video",
+      subtitle: "Testimonials: Watch Video",
     },
   ];
 
@@ -246,51 +259,50 @@ const Leadership = () => {
   const offerings = [
     {
       image: leadership,
-      title: "Offering 1",
-      subtitle: "Subtitle for offering 1",
+      title: "President",
+      subtitle: "Titilayo Ekundayo",
     },
     {
       image: leadership,
-      title: "Offering 2",
-      subtitle: "Subtitle for offering 2",
+      title: "President",
+      subtitle: "Titilayo Ekundayo",
     },
     {
       image: leadership,
-      title: "Offering 3",
-      subtitle: "Subtitle for offering 3",
+      title: "President",
+      subtitle: "Titilayo Ekundayo",
     },
     {
       image: leadership,
-      title: "Offering 4",
-      subtitle: "Subtitle for offering 4",
+      title: "President",
+      subtitle: "Titilayo Ekundayo",
     },
     {
       image: leadership,
-      title: "Offering 4",
-      subtitle: "Subtitle for offering 4",
+      title: "President",
+      subtitle: "Titilayo Ekundayo",
     },
     {
       image: leadership,
-      title: "Offering 4",
-      subtitle: "Subtitle for offering 4",
+      title: "President",
+      subtitle: "Titilayo Ekundayo",
     },
     {
       image: leadership,
-      title: "Offering 4",
-      subtitle: "Subtitle for offering 4",
+      title: "President",
+      subtitle: "Titilayo Ekundayo",
     },
     {
       image: leadership,
-      title: "Offering 4",
-      subtitle: "Subtitle for offering 4",
+      title: "President",
+      subtitle: "Titilayo Ekundayo",
     },
   ];
-
   return (
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-8 sm:px-12 lg:px-16">
         <h2 className="text-4xl font-bold mb-12 ">
-          Ikeja Toastmasters Leadership
+          Ikeja Toastmasters Leadership (2022 - Current)
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {offerings.map((offering, index) => (
@@ -303,10 +315,8 @@ const Leadership = () => {
                 />
               </div>
               <div className="text-left">
-                <h3 className="text-2xl font-semibold mb-2">
-                  {offering.title}
-                </h3>
-                <p className="text-lg text-gray-600">{offering.subtitle}</p>
+                <p className="text-lg text-gray-600 mb-2">{offering.title}</p>
+                <h3 className="text-2xl font-semibold">{offering.subtitle}</h3>
               </div>
             </div>
           ))}
@@ -350,19 +360,14 @@ const Awards = () => {
               <h2 className="text-3xl font-bold mb-6">Awards</h2>
               <p className="font-bold">National</p>
               <ul className="space-y-4 text-lg">
-                <li> High-quality services</li>
-                <li> Professional expertise</li>
-                <li> Competitive pricing</li>
-                <li> Customer satisfaction guaranteed</li>
-                <li> Innovative solutions tailored to your needs</li>
+                <li> 2X- Speakeasy Champion (2023, 2019)</li>
+                <li> 2X- Speakeasy Champion (2023, 2019)</li>
+                <li> 2X- Speakeasy Champion (2023, 2019)</li>
               </ul>
               <p className="mt-6 font-bold">International</p>
               <ul className="space-y-4 text-lg">
-                <li> High-quality services</li>
-                <li> Professional expertise</li>
-                <li> Competitive pricing</li>
-                <li> Customer satisfaction guaranteed</li>
-                <li> Innovative solutions tailored to your needs</li>
+                <li> 2X- Speakeasy Champion (2023, 2019)</li>
+                <li> 2X- Speakeasy Champion (2023, 2019)</li>
               </ul>
             </div>
 
@@ -434,13 +439,15 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
     <div className="mb-4">
       <button
         onClick={onClick}
-        className="w-full flex justify-between items-center text-left text-xl font-semibold py-4 px-6 bg-gray-100 rounded-lg focus:outline-none"
+        className="w-full flex justify-between items-center text-left text-xl font-semibold py-4 px-6 rounded-lg focus:outline-none"
+        // className="w-full flex justify-between items-center text-left text-xl font-semibold py-4 px-6 bg-gray-100 rounded-lg focus:outline-none"
       >
         <span>{title}</span>
         <span className="text-2xl">{isOpen ? "-" : "+"}</span>
       </button>
       {isOpen && (
-        <div className="px-6 py-4 bg-gray-50 border border-gray-200 rounded-b-lg">
+        <div className="px-6 py-4 rounded-b-lg">
+          {/* <div className="px-6 py-4 bg-gray-50 border border-gray-200 rounded-b-lg"> */}
           <p>{content}</p>
         </div>
       )}
@@ -457,9 +464,21 @@ const FAQ = () => {
   };
 
   const accordionData = [
-    { title: "Accordion 1", content: "Content for the first accordion." },
-    { title: "Accordion 2", content: "Content for the second accordion." },
-    { title: "Accordion 3", content: "Content for the third accordion." },
+    {
+      title: "Is there a free trial available?",
+      content:
+        "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+    },
+    {
+      title: "Is there a free trial available?",
+      content:
+        "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+    },
+    {
+      title: "Is there a free trial available?",
+      content:
+        "Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+    },
   ];
 
   return (
@@ -468,12 +487,12 @@ const FAQ = () => {
         <div className="flex flex-col lg:flex-row items-start justify-between">
           {/* Left Section: Title, Subtitle, and Button */}
           <div className="lg:w-1/2 mb-8 lg:mb-0">
-            <h2 className="text-3xl font-bold mb-4">Our Services</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Explore our wide range of services tailored to meet your needs.
-            </p>
+            <h2 className="text-3xl font-bold mb-4">
+              Frequently Asked Questions
+            </h2>
+
             <button className="bg-white border border-[#772432] text-[#772432] py-2 px-6 rounded-lg hover:bg-[#f8f8f8] hover:text-[#772432] transition">
-              Learn More
+              Join our Guest Whatsapp Group
             </button>
           </div>
 

@@ -74,13 +74,15 @@ export const BlogPreviewHero = () => {
       className="relative w-full h-[60vh] bg-cover bg-center"
       style={{ backgroundImage: `url(${bloghero})` }}
     >
-      <div className="absolute inset-0 bg-black opacity-40" />{" "}
+      {/* Darkened overlay */}
+      <div className="absolute inset-0 bg-black opacity-75" />{" "}
+      {/* Adjust opacity here */}
       <div className="flex items-center justify-center h-full relative z-10 text-center text-white">
         <div>
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
             Resources and insights
           </h1>
-          <p className="text-lg md:text-xl mb-8">
+          <p className="text-lg md:text-xl mb-16">
             The latest industry news, interviews, technologies, and resources.
           </p>
         </div>
