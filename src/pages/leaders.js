@@ -7,7 +7,7 @@ import Navbar from "../components/navbar";
 const Leaders = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <LeadersHero />
       <Leadership />
       <Quotes />

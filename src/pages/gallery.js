@@ -9,7 +9,7 @@ import Navbar from "../components/navbar";
 const Gallery = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <GalleryHero />
       <ThreeImageSection />
     </>

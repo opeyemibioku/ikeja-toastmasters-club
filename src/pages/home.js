@@ -15,7 +15,7 @@ import "./home.css";
 export const Home = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <HomeHero />
       <Quotes />
       <AboutUs />

@@ -9,7 +9,7 @@ import Navbar from "../components/navbar";
 const Members = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <MembersHero />
       <DownloadsSignUpSection />
       <WelcomeToTheClub />
