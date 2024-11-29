@@ -131,7 +131,7 @@ import { CreateBlog } from "./pages/createBlog";
 // Authentication components
 import { AccessAuth } from "./components/auth";
 import { db, auth } from "./pages/firebase/firebase-config";
-import { signOut, signInWithEmailAndPassword } from "firebase/auth";
+import { signOut } from "firebase/auth";
 
 // Import the Navbar
 import Navbar from "./components/navbar";
