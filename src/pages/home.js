@@ -40,10 +40,13 @@ const Quotes = () => {
               class="w-24 h-16 object-cover rounded"
             />
             <div>
-              <p class="text-gray-600">
-                “In a world older and more complete than ours they finished and
-                complete, gifted with exten have lost or never attained, living
-                by voices we shall never hear.”
+              <p class="text-gray-600" style={{ fontSize: "0.7rem" }}>
+                “The two words 'information' and 'communication' are often used
+                interchangeably, but they signify quite different things.
+                Information is giving out; communication is getting through. ”
+              </p>
+              <p class="text-black-600" style={{ fontSize: "0.7rem" }}>
+                Sydney J. Harris
               </p>
             </div>
           </div>
@@ -55,10 +58,13 @@ const Quotes = () => {
               class="w-24 h-16 object-cover rounded"
             />
             <div>
-              <p class="text-gray-600">
-                “In a world older and more complete than ours they finished and
-                complete, gifted with exten have lost or never attained, living
-                by voices we shall never hear.”
+              <p class="text-gray-600" style={{ fontSize: "0.7rem" }}>
+                “ To effectively communicate, we must realize that we are all
+                different in the way we perceive the world and use this
+                understanding as a guide to our communication with others. ”
+              </p>
+              <p class="text-black-600" style={{ fontSize: "0.7rem" }}>
+                Tony Robbins
               </p>
             </div>
           </div>
@@ -70,10 +76,13 @@ const Quotes = () => {
               class="w-24 h-16 object-cover rounded"
             />
             <div>
-              <p class="text-gray-600">
-                “In a world older and more complete than ours they finished and
-                complete, gifted with exten have lost or never attained, living
-                by voices we shall never hear.”
+              <p class="text-gray-600" style={{ fontSize: "0.7rem" }}>
+                “Communication is a skill that you can learn. It's like riding a
+                bicycle or typing. If you're willing to work at it, you can
+                rapidly improve the quality of evry part of your life.”
+              </p>
+              <p class="text-black-600" style={{ fontSize: "0.7rem" }}>
+                Brian Tracy
               </p>
             </div>
           </div>
@@ -146,39 +155,33 @@ const WhatWeDo = () => {
   const offerings = [
     {
       image: whatwedo,
-      title: "Public Speaking",
+      title: "Mentoring",
       subtitle:
-        "At Ikeja Toastmasters, we believe in the power of communication and leadership to transform lives",
+        "Through the art of mentoring at Ikeja Toastmasters, seasoned members walk alongside newcomers, creating a legacy of excellence and empowerment that spans generations. We believe in the power of shared wisdom and guidance to shape future leaders and unlock hidden potential.",
     },
     {
       image: whatwedo,
-      title: "Public Speaking",
+      title: "Leadership Training",
       subtitle:
-        "At Ikeja Toastmasters, we believe in the power of communication and leadership to transform lives",
+        "At Ikeja Toastmasters, we believe in the power of authentic leadership skills to inspire teams and drive positive change. We forge tomorrow's visionaries through hands-on experience, practical challenges, and proven leadership frameworks.",
     },
     {
       image: whatwedo,
-      title: "Public Speaking",
+      title: "Personal Development",
       subtitle:
-        "At Ikeja Toastmasters, we believe in the power of communication and leadership to transform lives",
+        "Every meeting at Ikeja Toastmasters is a stepping stone toward personal mastery, where members discover their voice and unlock their full potential.We believe in the power of continuous growth and self-improvement to help you become your best self.",
     },
     {
       image: whatwedo,
-      title: "Public Speaking",
+      title: "Career Advancement",
       subtitle:
-        "At Ikeja Toastmasters, we believe in the power of communication and leadership to transform lives",
+        "Ikeja Toastmasters serves as your launchpad for professional success, equipping you with the confidence, presence, and skills that set you apart in today's competitive workplace.",
     },
     {
       image: whatwedo,
-      title: "Public Speaking",
+      title: "Communication Skills",
       subtitle:
-        "At Ikeja Toastmasters, we believe in the power of communication and leadership to transform lives",
-    },
-    {
-      image: whatwedo,
-      title: "Public Speaking",
-      subtitle:
-        "At Ikeja Toastmasters, we believe in the power of communication and leadership to transform lives",
+        "From crafting compelling stories to mastering executive presence, Ikeja Toastmasters transforms ordinary speakers into extraordinary communicators who command attention and inspire action. Helping you break barriers, build connections, and amplify your impact.",
     },
   ];
 

@@ -20,44 +20,52 @@ const Leadership = () => {
   const offerings = [
     {
       image: leadership,
-      title: "President",
-      subtitle: "Titilayo Ekundayo",
+      title: "Club President",
+      tenure: "July 2021- June 2022",
+      subtitle: "Ibraheem Kasim",
     },
     {
       image: leadership,
-      title: "President",
-      subtitle: "Titilayo Ekundayo",
+      title: "VP Membership, VP Education, and Club President",
+      // tenure: "July 2021- June 2022",
+      subtitle: "Abdullahi Jimoh",
     },
     {
       image: leadership,
-      title: "President",
-      subtitle: "Titilayo Ekundayo",
+      title:
+        "Pioneering Executive Member , Third President of Ikeja Toastmaster",
+      tenure: "2015/2016",
+      subtitle: "Ibrahim fatoyinbo",
     },
     {
       image: leadership,
-      title: "President",
-      subtitle: "Titilayo Ekundayo",
+      title: "Assistant Division Director Club Growth 2",
+      tenure: "2023 - 2024",
+      subtitle: "Clarence Jumbo",
     },
     {
       image: leadership,
-      title: "President",
-      subtitle: "Titilayo Ekundayo",
+      title: "Charter President ",
+      tenure: "2013/2014",
+      subtitle: "Ibrahim Owolabi",
     },
     {
       image: leadership,
-      title: "President",
-      subtitle: "Titilayo Ekundayo",
+      title: "Current President",
+      // tenure: "July 2021- June 2022",
+      subtitle: "Stephen Oluwadare",
     },
-    {
-      image: leadership,
-      title: "President",
-      subtitle: "Titilayo Ekundayo",
-    },
-    {
-      image: leadership,
-      title: "President",
-      subtitle: "Titilayo Ekundayo",
-    },
+    // {
+    //   image: leadership,
+    //   title: "President",
+    //   tenure: "July 2021- June 2022",
+    //   subtitle: "Titilayo Ekundayo",
+    // },
+    // {
+    //   image: leadership,
+    //   title: "President",
+    //   subtitle: "Titilayo Ekundayo",
+    // },
   ];
 
   return (
@@ -77,8 +85,19 @@ const Leadership = () => {
                 />
               </div>
               <div className="text-left">
-                <p className="text-lg text-gray-600 mb-2">{offering.title}</p>
                 <h3 className="text-2xl font-semibold">{offering.subtitle}</h3>
+                <p
+                  className="text-lg text-gray-600 mb-2"
+                  style={{ fontSize: "1rem" }}
+                >
+                  {offering.title}
+                </p>
+                <p
+                  className="text-lg text-gray-600 mb-2"
+                  style={{ fontSize: "0.8rem" }}
+                >
+                  {offering.tenure}
+                </p>
               </div>
             </div>
           ))}
