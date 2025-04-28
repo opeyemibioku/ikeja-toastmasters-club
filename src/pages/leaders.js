@@ -110,33 +110,23 @@ const Leadership = () => {
 const testimonialsData = [
   {
     id: 1,
-    text: "“In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have lost or never attained, living by voices we shall never hear.”",
-    author: "— Titilayo Ekundayo, President, Ikeja Toastmasters.",
+    text: "“Ikeja Toastmaster club is a pedestal for personal and professional development. I've grown from strength to strength by mere association with this noble club.”",
+    author: "— Ibraheem Kasim",
   },
   {
     id: 2,
-    text: "“In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have lost or never attained, living by voices we shall never hear.”",
-    author: "— Titilayo Ekundayo, President, Ikeja Toastmasters.",
+    text: "“Subscribing to toastmasters International was one of the best decisions i took, toastmasters club as tremendously added value to my public speaking dexterity and leadership capacity. This has induced successes recorded in my career development.”",
+    author: "— Ibrahim Fatoyinbo",
   },
   {
     id: 3,
-    text: "“In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have lost or never attained, living by voices we shall never hear.”",
-    author: "— Titilayo Ekundayo, President, Ikeja Toastmasters.",
+    text: "“Toastmasters International is an organization built on a vision to transform lives, build individual self esteem and make you a change agent. Toastmasters International will help you find your voice, use the power of words to confidently impact lives and transform society.”",
+    author: "— Clarence Jumbo",
   },
   {
     id: 4,
-    text: "“In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have lost or never attained, living by voices we shall never hear.”",
-    author: "— Titilayo Ekundayo, President, Ikeja Toastmasters.",
-  },
-  {
-    id: 5,
-    text: "“In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have lost or never attained, living by voices we shall never hear.”",
-    author: "— Titilayo Ekundayo, President, Ikeja Toastmasters.",
-  },
-  {
-    id: 6,
-    text: "“In a world older and more complete than ours they move finished and complete, gifted with extensions of the senses we have lost or never attained, living by voices we shall never hear.”",
-    author: "— Titilayo Ekundayo, President, Ikeja Toastmasters.",
+    text: "“Joining NCPS Toastmasters in Abuja in 2013 and Chartering Ikeja Toastmasters Club in 2014 alongside others taught me invaluable lessons in leadership and teamwork. The skills I have developed in communication and leadership have continually improved over time, earning me recognition both personally and professionally.”",
+    author: "— Ibrahim Owolabi",
   },
 ];
 
