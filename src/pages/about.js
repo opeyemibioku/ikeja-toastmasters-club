@@ -21,7 +21,7 @@ const About = () => {
       <OurHistory />
       <Offerings />
       <Testimonials />
-      <Leadership />
+      {/* <Leadership /> */}
       <Gallery />
       <Awards />
       <FAQ />

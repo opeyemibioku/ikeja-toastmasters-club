@@ -9,7 +9,7 @@ const Leaders = () => {
     <>
       {/* <Navbar /> */}
       <LeadersHero />
-      <Leadership />
+      {/* <Leadership /> */}
       <Quotes />
       <Events />
     </>
