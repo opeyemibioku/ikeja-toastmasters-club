@@ -67,7 +67,7 @@ const ContactForm = () => {
         {/* Contact Form on the Left */}
         <div className="lg:w-1/2 mx-auto">
           <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
-          <p>Welcome back Titilayo, Enter your details</p>
+
           <form>
             <div className="mb-4 mt-8">
               <label className="block text-gray-700 mb-2" htmlFor="name">

@@ -14,3 +14,25 @@ p {
 .primary-color {
   color: #004165;
 }
+
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* For vertical scrolling, you'd use translateY */
+/*
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+*/

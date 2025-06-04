@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { LeadersHero } from "../components/hero";
 import leadership from "../assets/images/about/leadership.png";
 import event from "../assets/images/leaders/event.png";
@@ -107,7 +107,7 @@ const Leadership = () => {
   );
 };
 
-const testimonialsData = [
+const quotesData = [
   {
     id: 1,
     text: "“Ikeja Toastmaster club is a pedestal for personal and professional development. I've grown from strength to strength by mere association with this noble club.”",
@@ -130,54 +130,93 @@ const testimonialsData = [
   },
 ];
 
-const TestimonialCard = ({ text, author }) => (
-  <div className="min-w-[30rem] overflow-hidden mx-2 mb-8 pt-8">
-    <p className="text-gray-600 font-md text-white">{text}</p>
-    <p className="text-left mt-4 text-white">{author}</p>
+const QuotesCard = ({ text, author }) => (
+  <div className="min-w-[30rem] flex-shrink-0 mx-2 pb-8 pt-8">
+    <p
+      className="text-gray-600 font-md text-white text-base leading-relaxed px-6"
+      style={{
+        maxWidth: "27rem",
+        wordBreak: "break-word",
+        whiteSpace: "normal",
+      }}
+    >
+      {text}
+    </p>
+
+    <p className="text-left mt-4 text-white text-base px-6">{author}</p>
   </div>
 );
 
 const Quotes = () => {
   const scrollRef = useRef(null);
+  const [items, setItems] = useState([]);
 
-  const scroll = (direction) => {
-    const scrollAmount = direction === "left" ? -300 : 300;
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
-  };
+  useEffect(() => {
+    setItems([...quotesData, ...quotesData, ...quotesData]);
+  }, []);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    let animationFrameId;
+    let scrollSpeed = 0.5;
+
+    const scroll = () => {
+      if (scrollContainer.scrollLeft >= (scrollContainer.scrollWidth / 3) * 2) {
+        scrollContainer.scrollLeft = scrollContainer.scrollWidth / 3;
+      }
+      scrollContainer.scrollLeft += scrollSpeed;
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    const startScrollAfterRender = setTimeout(() => {
+      scrollContainer.scrollLeft = scrollContainer.scrollWidth / 3;
+      animationFrameId = requestAnimationFrame(scroll);
+    }, 100);
+
+    const handleMouseEnter = () => {
+      cancelAnimationFrame(animationFrameId);
+    };
+
+    const handleMouseLeave = () => {
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    scrollContainer.addEventListener("mouseenter", handleMouseEnter);
+    scrollContainer.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      clearTimeout(startScrollAfterRender);
+      cancelAnimationFrame(animationFrameId);
+      scrollContainer.removeEventListener("mouseenter", handleMouseEnter);
+      scrollContainer.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, [items]);
 
   return (
-    <div className="lg:pl-32 bg-[#004165] py-8">
+    <div className="lg:pl-32 bg-[#004165] py-8 overflow-hidden">
       <h1 className="text-2xl font-bold mt-8 text-white pl-4">
         Past Presidents Quotes
       </h1>
       <div
-        className="flex overflow-x-scroll scrollbar-hide pb-8"
+        className="flex overflow-x-hidden pb-8 custom-scrollbar-hide"
         ref={scrollRef}
+        style={{
+          maskImage:
+            "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+        }}
       >
-        {testimonialsData.map((testimonial) => (
-          <TestimonialCard
-            key={testimonial.id}
-            text={testimonial.text}
-            author={testimonial.author}
+        {items.map((quote, index) => (
+          <QuotesCard
+            key={`${quote.id}-${index}`}
+            text={quote.text}
+            author={quote.author}
           />
         ))}
       </div>
-      {/* <div className="flex justify-center mt-4">
-        <button
-          onClick={() => scroll("left")}
-          className="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center mx-2 hover:bg-blue-600 transition-colors"
-        >
-          &lt; 
-        </button>
-        <button
-          onClick={() => scroll("right")}
-          className="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center mx-2 hover:bg-blue-600 transition-colors"
-        >
-          &gt; 
-        </button>
-      </div> */}
     </div>
   );
 };

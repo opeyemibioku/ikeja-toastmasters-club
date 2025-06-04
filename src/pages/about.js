@@ -34,11 +34,13 @@ const Heroo = () => {
     <>
       <section className="relative flex flex-col-reverse md:flex-row items-center justify-around gap-8 p-8 md:p-16">
         <div className="md:w-5/12 space-y-4">
-          <p className="text-lg md:text-xl text-gray-700">ABOUT US</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#094F72]">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-700">
+            ABOUT US
+          </h1>
+          <p className="text-lg md:text-xl text-[#094F72]">
             Helping individuals develop their public speaking and leadership
             skills in a supportive and encouraging environment
-          </h1>
+          </p>
         </div>
         <div className="md:w-5/12 relative">
           <div className="hidden lg:block md:block max-w-lg rounded overflow-hidden shadow-lg bg-[#004165] w-full h-auto z-10 relative -right-20">
@@ -124,11 +126,13 @@ const Hero = () => {
       <section className="relative flex flex-col-reverse md:flex-row items-center justify-around gap-8 p-8 md:p-16">
         {/* About Section */}
         <div className="md:w-5/12 space-y-4">
-          <p className="text-lg md:text-xl text-gray-700">ABOUT US</p>
-          <h1 className="text-3xl md:text-4xl font-bold text-[#094F72]">
+          <h1 className="text-3xl md:text-3xl font-bold text-gray-700">
+            ABOUT US
+          </h1>
+          <p className="text-lg md:text-xl text-[#094F72]">
             Helping individuals develop their public speaking and leadership
             skills in a supportive and encouraging environment
-          </h1>
+          </p>
         </div>
 
         {/* Image Section */}

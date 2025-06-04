@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 //internal import
 
@@ -28,69 +28,114 @@ export const Home = () => {
   );
 };
 
+const quotesData = [
+  {
+    id: 1,
+    text: "“The two words 'information' and 'communication' are often used interchangeably, but they signify quite different things. Information is giving out; communication is getting through. ”",
+    author: "— Sydney J. Harris",
+  },
+  {
+    id: 2,
+    text: "“To effectively communicate, we must realize that we are all different in the way we perceive the world and use this understanding as a guide to our communication with others.”",
+    author: "— Tony Robbins",
+  },
+  {
+    id: 3,
+    text: "“Communication is a skill that you can learn. It's like riding a bicycle or typing. If you're willing to work at it, you can rapidly improve the quality of evry part of your life.”",
+    author: "— Brian Tracy",
+  },
+];
+
+const QuotesCard = ({ text, author }) => (
+  <div className="min-w-[30rem] flex-shrink-0 mx-2 pb-8 pt-8">
+    <p
+      className="text-gray-600 font-md text-black text-base leading-relaxed px-6"
+      style={{
+        maxWidth: "27rem",
+        wordBreak: "break-word",
+        whiteSpace: "normal",
+      }}
+    >
+      {text}
+    </p>
+
+    <p className="text-left mt-4 text-black text-base px-6">{author}</p>
+  </div>
+);
+
 const Quotes = () => {
+  const scrollRef = useRef(null);
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    setItems([...quotesData, ...quotesData, ...quotesData]);
+  }, []);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    let animationFrameId;
+    let scrollSpeed = 0.5;
+
+    const scroll = () => {
+      if (scrollContainer.scrollLeft >= (scrollContainer.scrollWidth / 3) * 2) {
+        scrollContainer.scrollLeft = scrollContainer.scrollWidth / 3;
+      }
+      scrollContainer.scrollLeft += scrollSpeed;
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    const startScrollAfterRender = setTimeout(() => {
+      scrollContainer.scrollLeft = scrollContainer.scrollWidth / 3;
+      animationFrameId = requestAnimationFrame(scroll);
+    }, 100);
+
+    const handleMouseEnter = () => {
+      cancelAnimationFrame(animationFrameId);
+    };
+
+    const handleMouseLeave = () => {
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    scrollContainer.addEventListener("mouseenter", handleMouseEnter);
+    scrollContainer.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      clearTimeout(startScrollAfterRender);
+      cancelAnimationFrame(animationFrameId);
+      scrollContainer.removeEventListener("mouseenter", handleMouseEnter);
+      scrollContainer.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, [items]);
+
   return (
-    <>
-      <div class="container mx-auto px-4 py-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-10">
-          <div class="flex items-center space-x-4">
-            <img
-              src={quoteimage}
-              alt="Image 1"
-              class="w-24 h-16 object-cover rounded"
-            />
-            <div>
-              <p class="text-gray-600" style={{ fontSize: "0.7rem" }}>
-                “The two words 'information' and 'communication' are often used
-                interchangeably, but they signify quite different things.
-                Information is giving out; communication is getting through. ”
-              </p>
-              <p class="text-black-600" style={{ fontSize: "0.7rem" }}>
-                Sydney J. Harris
-              </p>
-            </div>
-          </div>
-
-          <div class="flex items-center space-x-4">
-            <img
-              src={quoteimage}
-              alt="Image 2"
-              class="w-24 h-16 object-cover rounded"
-            />
-            <div>
-              <p class="text-gray-600" style={{ fontSize: "0.7rem" }}>
-                “ To effectively communicate, we must realize that we are all
-                different in the way we perceive the world and use this
-                understanding as a guide to our communication with others. ”
-              </p>
-              <p class="text-black-600" style={{ fontSize: "0.7rem" }}>
-                Tony Robbins
-              </p>
-            </div>
-          </div>
-
-          <div class="flex items-center space-x-4 md:col-span-2 lg:col-span-1 md:justify-center">
-            <img
-              src={quoteimage}
-              alt="Image 3"
-              class="w-24 h-16 object-cover rounded"
-            />
-            <div>
-              <p class="text-gray-600" style={{ fontSize: "0.7rem" }}>
-                “Communication is a skill that you can learn. It's like riding a
-                bicycle or typing. If you're willing to work at it, you can
-                rapidly improve the quality of evry part of your life.”
-              </p>
-              <p class="text-black-600" style={{ fontSize: "0.7rem" }}>
-                Brian Tracy
-              </p>
-            </div>
-          </div>
-        </div>
+    <div className="lg:pl-32 py-8 overflow-hidden">
+      <div
+        className="flex overflow-x-hidden pb-8 custom-scrollbar-hide"
+        ref={scrollRef}
+        style={{
+          // ADJUSTED AGAIN: Making the fade-in extremely short on the left.
+          // This should make the content appear almost fully visible right from the edge.
+          maskImage:
+            "linear-gradient(to right, transparent 0%, black 0.1%, black 90%, transparent 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent 0%, black 0.1%, black 90%, transparent 100%)",
+        }}
+      >
+        {items.map((quote, index) => (
+          <QuotesCard
+            key={`${quote.id}-${index}`}
+            text={quote.text}
+            author={quote.author}
+          />
+        ))}
       </div>
-    </>
+    </div>
   );
 };
+
 const AboutUs = () => {
   return (
     <div className="overflow-hidden bg-white">
@@ -157,31 +202,31 @@ const WhatWeDo = () => {
       image: whatwedo,
       title: "Mentoring",
       subtitle:
-        "Through the art of mentoring at Ikeja Toastmasters, seasoned members walk alongside newcomers, creating a legacy of excellence and empowerment that spans generations. We believe in the power of shared wisdom and guidance to shape future leaders and unlock hidden potential.",
+        "Through the art of mentoring, seasoned members walk alongside newcomers, creating a legacy of excellence and empowerment that spans generations.",
     },
     {
       image: whatwedo,
       title: "Leadership Training",
       subtitle:
-        "At Ikeja Toastmasters, we believe in the power of authentic leadership skills to inspire teams and drive positive change. We forge tomorrow's visionaries through hands-on experience, practical challenges, and proven leadership frameworks.",
+        "At Ikeja Toastmasters, we believe in the power of authentic leadership skills to inspire teams and drive positive change.",
     },
     {
       image: whatwedo,
       title: "Personal Development",
       subtitle:
-        "Every meeting at Ikeja Toastmasters is a stepping stone toward personal mastery, where members discover their voice and unlock their full potential.We believe in the power of continuous growth and self-improvement to help you become your best self.",
+        "Every meeting at is a stepping stone toward personal mastery, where members discover their voice and unlock their full potential.",
     },
     {
       image: whatwedo,
       title: "Career Advancement",
       subtitle:
-        "Ikeja Toastmasters serves as your launchpad for professional success, equipping you with the confidence, presence, and skills that set you apart in today's competitive workplace.",
+        "We serve as a launchpad for professional success, equipping you with the confidence, presence, and skills that set you apart in today.",
     },
     {
       image: whatwedo,
       title: "Communication Skills",
       subtitle:
-        "From crafting compelling stories to mastering executive presence, Ikeja Toastmasters transforms ordinary speakers into extraordinary communicators who command attention and inspire action. Helping you break barriers, build connections, and amplify your impact.",
+        "From crafting compelling stories to mastering executive presence, we transform ordinary speakers into extraordinary communicators who command attention and inspire action.",
     },
   ];
 
@@ -190,7 +235,7 @@ const WhatWeDo = () => {
       <div className="container mx-auto px-8 sm:px-12 lg:px-16">
         {/* Align the "What we do" text to the left */}
         <h2 className="text-4xl font-bold mb-12 text-left">What we do</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {offerings.map((offering, index) => (
             <div key={index} className="relative overflow-hidden shadow-lg">
               <img
@@ -262,11 +307,18 @@ const MeetingSchedule = () => {
             </div>
             <div className="relative w-full lg:w-1/2 flex-shrink-0">
               <div className="absolute inset-0 bg-gray-100 w-9/12 h-full transform translate-x-5 translate-y-8 opacity-10"></div>
-              <img
-                className="relative w-full h-auto max-w-md object-cover"
-                src={map}
-                alt="Map"
-              />
+              <a
+                href="https://maps.app.goo.gl/2TnGJomZTGpzcL8K7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                <img
+                  className="relative w-full h-auto max-w-md object-cover"
+                  src={map}
+                  alt="Map"
+                />
+              </a>
             </div>
           </div>
         </div>

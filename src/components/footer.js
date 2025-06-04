@@ -17,10 +17,15 @@ export const Footer = () => {
               Meeting Place Address
             </h4>
             <ul class="list-none space-y-2">
-              <li className="text-white">13, Walter Carrington</li>
-              <li className="text-white">Victoria Island</li>
-              <li className="text-white">Lagos</li>
-              <li className="text-white">Nigeria</li>
+              <li className="text-white">
+                <a
+                  href="https://maps.app.goo.gl/2TnGJomZTGpzcL8K7"
+                  target="_blank"
+                >
+                  Lagos Energy Academy
+                </a>
+              </li>
+              <li className="text-white">GRA, Ikeja, Lagos, Nigeria</li>
             </ul>
           </div>
 
@@ -43,26 +48,6 @@ export const Footer = () => {
                 {" "}
                 <li className="text-white">About us</li>
               </a>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-bold mb-4 text-white">External Links</h4>
-            <ul class="list-none space-y-2">
-              <li className="text-white">Toastmasters International</li>
-              <li className="text-white">Eagles Toastmasters</li>
-              <li className="text-white">Broadway Toastmasters</li>
-              <li className="text-white">Navant</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-bold mb-4 text-white">Contact Us</h4>
-            <ul class="list-none space-y-2">
-              <li className="text-white">13, Walter Carrington</li>
-              <li className="text-white">Victoria Island</li>
-              <li className="text-white">Lagos</li>
-              <li className="text-white">Nigeria</li>
               <a href="/contact">
                 {" "}
                 <li className="text-white">Contact</li>
@@ -70,23 +55,79 @@ export const Footer = () => {
             </ul>
           </div>
 
+          <div>
+            <h4 class="text-lg font-bold mb-4 text-white">External Links</h4>
+            <ul class="list-none space-y-2">
+              <li className="text-white">
+                <a
+                  href="https://www.toastmasters.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Toastmasters International
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-4 text-white">Contact Us</h4>
+            <ul class="list-none space-y-2">
+              <li className="text-white">
+                <a href="tel:+2348060435075">08060435075</a>
+              </li>
+              <li className="text-white">Mon to Fri; 3pm - 5pm</li>
+              <li className="text-white">
+                <a href="mailto:ikejatoastclub@gmail.com">
+                  {" "}
+                  ikejatoastclub@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
+
           <div class="flex flex-col justify-end">
             <div class="flex items-center space-x-4">
               <h4 class="text-lg font-bold text-white">Get in Touch</h4>
               <div class="flex space-x-4">
-                <a href="#" class="text-gray-600 hover:text-gray-900">
+                <a
+                  href="https://www.facebook.com/share/1Kp3BbKbQp/?mibextid=qi2Omg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-600 hover:text-gray-900"
+                >
                   <img src={fb} />
                 </a>
-                <a href="#" class="text-gray-600 hover:text-gray-900">
+                <a
+                  href="https://x.com/ikejatmnigeria"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-600 hover:text-gray-900"
+                >
                   <img src={x} />
                 </a>
-                <a href="#" class="text-gray-600 hover:text-gray-900">
+                <a
+                  href="https://www.linkedin.com/company/ikejatoastmasters/?viewAsMember=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-600 hover:text-gray-900"
+                >
                   <img src={linkedin} />
                 </a>
-                <a href="#" class="text-gray-600 hover:text-gray-900">
+                <a
+                  href="https://www.instagram.com/p/DGL-R3QstVf/?igsh=MTdkN3ZyZnZ5ZWt2dg=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-600 hover:text-gray-900"
+                >
                   <img src={ig} />
                 </a>
-                <a href="#" class="text-gray-600 hover:text-gray-900">
+                <a
+                  href="https://www.youtube.com/@IkejaToastmastersClub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-600 hover:text-gray-900"
+                >
                   <img src={youtube} />
                 </a>
               </div>
@@ -122,7 +163,7 @@ export const Footer = () => {
               </a>
             </div>
             <span className="text-sm text-gray-600 text-white">
-              © Copyright 2024 Ikeja Toastmasters. All Rights Reserved
+              © Copyright 2025 Ikeja Toastmasters. All Rights Reserved
             </span>
           </div>
         </div>

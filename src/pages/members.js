@@ -43,13 +43,11 @@ const WelcomeToTheClub = () => {
         <h2 className="text-2xl font-bold mb-4">
           We are proud to welcome you to the club
         </h2>
+        <p className="text-lg text-gray-700 mb-4">Have questions?</p>
         <p className="text-lg text-gray-700 mb-4">
-          Come to our Meetings as a Guest
+          Send us an email at{" "}
+          <a href="mailto:ikejatoastclub@gmail.com">ikejatoastclub@gmail.com</a>
         </p>
-        <p className="text-lg text-gray-700 mb-4">
-          Come to our Meetings as a Guest
-        </p>
-        <p className="text-lg text-gray-700">Come to our Meetings as a Guest</p>
       </div>
       <div className="md:w-6/12 flex justify-center">
         <div className="bg-[#004165] shadow-md overflow-hidden w-full md:max-w-[400px]">
@@ -59,11 +57,17 @@ const WelcomeToTheClub = () => {
             className="w-full h-48 object-cover"
           />
           <div className="p-4">
-            <p className="text-white mb-4">Lorem ipsum dolor</p>
             <h2 className="text-xl font-semibold text-white mb-8">
-              Come to Our Meetings as a Guest Lorem Ipsum dolor ascet
+              Come to our meeting as a Guest, you are always welcome.
             </h2>
-            <p className="text-white">24, Adeola Odeku Street, Ikeja.</p>
+            <a
+              href="https://maps.app.goo.gl/2TnGJomZTGpzcL8K7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <p className="text-white">Lagos Energy Academy GRA Ikeja</p>
+            </a>
           </div>
         </div>
       </div>
