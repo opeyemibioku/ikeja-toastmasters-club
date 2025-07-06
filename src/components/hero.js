@@ -36,7 +36,9 @@ export default function HomeHero() {
 
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="/members"
+                href="https://chat.whatsapp.com/GuqV8MpLuMIBdyQxW1Vl5J"
+                 target="_blank"
+                  rel="noopener noreferrer"
                 className="rounded-md bg-gray-500 border border-white px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
               >
                 Join us

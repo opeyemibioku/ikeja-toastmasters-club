@@ -332,7 +332,7 @@ const posts = [
     id: 1,
     href: "#",
     description:
-      "“The Agency provides exceptional service with unmatched professionalism, tailoring clients to workers. Their proactive approach and seamless communication led to efficient delivery of desired services.”",
+      "“Being a member of the Ikeja Toastmasters Club has shaped me in many ways. One significant improvement is my ability to think on my feet during impromptu speeches, thanks to the club’s Table Topics sessions. Additionally, the CRC (Commend, Recommend, Commend) evaluation method has enhanced my ability to provide constructive feedback to both subordinates and colleagues at work.”",
     date: "Mar 16, 2020",
     datetime: "2020-03-16",
 
@@ -348,49 +348,12 @@ const posts = [
     id: 2,
     href: "#",
     description:
-      "“The Agency provides  exceptional service with unmatched professionalism, tailoring clients to workers. Their proactive approach and seamless communication led to efficient delivery of desired services.”",
-    date: "Apr 10, 2021",
-    datetime: "2021-04-10",
-
-    author: {
-      name: "Omotebi Akinnagbe",
-      role: "Client",
-      href: "#",
-      imageUrl:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
+      "“It has been a game-changer for me! It helped me develop confidence in communication, enabling me to effectively connect with clients, colleagues, friends, and family. Through toastmasters, I've gained the courage to speak in front of audiences and articulate my thoughts clearly in various settings. Toastmasters has truly transformed my personal and professional life, and I'm grateful for the experience!”",
   },
   {
     id: 3,
     href: "#",
-    description:
-      "“The Agency provides  exceptional service with unmatched professionalism, tailoring clients to workers. Their proactive approach and seamless communication led to efficient delivery of desired services.”",
-    date: "May 15, 2022",
-    datetime: "2022-05-15",
-
-    author: {
-      name: "Akinnnagbe Olajide",
-      role: "Client",
-      href: "#",
-      imageUrl:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
-  },
-  {
-    id: 4,
-    href: "#",
-    description:
-      "“The Agency provides  exceptional service with unmatched professionalism, tailoring clients to workers. Their proactive approach and seamless communication led to efficient delivery of desired services.”",
-    date: "Jun 20, 2023",
-    datetime: "2023-06-20",
-
-    author: {
-      name: "Constance C.J.",
-      role: "Member / Coach",
-      href: "#",
-      imageUrl:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    },
+    description: "“Tremendous and positive impact.”",
   },
 ];
 
@@ -411,11 +374,11 @@ const MembersTalk = () => {
               className="flex max-w-xl flex-col items-start justify-between bg-[#F5F5F5] p-6 rounded-lg shadow-md"
             >
               <div className="group relative border-b pb-8">
-                <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                <p className="mt-5 text-sm leading-6 text-gray-600">
                   {post.description}
                 </p>
               </div>
-              <div className="relative mt-8 flex items-center gap-x-4">
+              {/* <div className="relative mt-8 flex items-center gap-x-4">
                 <img
                   alt=""
                   src={post.author.imageUrl}
@@ -430,7 +393,7 @@ const MembersTalk = () => {
                   </p>
                   <p className="text-gray-600">{post.author.role}</p>
                 </div>
-              </div>
+              </div> */}
             </article>
           ))}
         </div>
